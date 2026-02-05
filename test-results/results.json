@@ -1,7 +1,7 @@
 {
   "config": {
-    "configFile": "/Users/thilinaweerasinghe/Desktop/untitled folder 3/playwright.config.ts",
-    "rootDir": "/Users/thilinaweerasinghe/Desktop/untitled folder 3/tests",
+    "configFile": "C:\\Users\\thilina\\OneDrive - Perfect Business Solutions Services (Pvt) Ltd\\Desktop\\Automation Testing\\SitrekQA\\playwright.config.ts",
+    "rootDir": "C:/Users/thilina/OneDrive - Perfect Business Solutions Services (Pvt) Ltd/Desktop/Automation Testing/SitrekQA/tests",
     "forbidOnly": false,
     "fullyParallel": true,
     "globalSetup": null,
@@ -16,7 +16,7 @@
     "preserveOutput": "always",
     "projects": [
       {
-        "outputDir": "/Users/thilinaweerasinghe/Desktop/untitled folder 3/test-results",
+        "outputDir": "C:/Users/thilina/OneDrive - Perfect Business Solutions Services (Pvt) Ltd/Desktop/Automation Testing/SitrekQA/test-results",
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
@@ -24,7 +24,7 @@
         },
         "id": "chromium",
         "name": "chromium",
-        "testDir": "/Users/thilinaweerasinghe/Desktop/untitled folder 3/tests",
+        "testDir": "C:/Users/thilina/OneDrive - Perfect Business Solutions Services (Pvt) Ltd/Desktop/Automation Testing/SitrekQA/tests",
         "testIgnore": [],
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
@@ -67,21 +67,21 @@
   },
   "suites": [
     {
-      "title": "cities-master.spec.ts",
-      "file": "cities-master.spec.ts",
+      "title": "2_19_reasons-type-master.spec.ts",
+      "file": "2_19_reasons-type-master.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [],
       "suites": [
         {
-          "title": "Cities Master - Sync Functionality",
-          "file": "cities-master.spec.ts",
+          "title": "Reasons Type Master - CRUD Operations",
+          "file": "2_19_reasons-type-master.spec.ts",
           "line": 6,
           "column": 6,
           "specs": [
             {
-              "title": "TC_CITIES_MASTER_001: Verify Cities Master navigation, Sync All, and local time display",
-              "ok": false,
+              "title": "TC_REASONS_TYPE_MASTER_003: Should show error when creating duplicate code",
+              "ok": true,
               "tags": [],
               "tests": [
                 {
@@ -94,227 +94,46 @@
                     {
                       "workerIndex": 0,
                       "parallelIndex": 0,
-                      "status": "failed",
-                      "duration": 16004,
-                      "error": {
-                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n    at /Users/thilinaweerasinghe/Desktop/untitled folder 3/tests/cities-master.spec.ts:97:41",
-                        "location": {
-                          "file": "/Users/thilinaweerasinghe/Desktop/untitled folder 3/tests/cities-master.spec.ts",
-                          "column": 41,
-                          "line": 97
-                        },
-                        "snippet": "\u001b[0m \u001b[90m  95 |\u001b[39m             }\n \u001b[90m  96 |\u001b[39m             \n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  97 |\u001b[39m             expect(validTimestampCount)\u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m  98 |\u001b[39m         } \u001b[36melse\u001b[39m {\n \u001b[90m  99 |\u001b[39m             console\u001b[33m.\u001b[39mlog(\u001b[32m'✗ No timestamps found in the grid'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 100 |\u001b[39m             \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m'No timestamps found in Cities Master grid'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
-                      },
-                      "errors": [
-                        {
-                          "location": {
-                            "file": "/Users/thilinaweerasinghe/Desktop/untitled folder 3/tests/cities-master.spec.ts",
-                            "column": 41,
-                            "line": 97
-                          },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n\n\u001b[0m \u001b[90m  95 |\u001b[39m             }\n \u001b[90m  96 |\u001b[39m             \n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  97 |\u001b[39m             expect(validTimestampCount)\u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m  98 |\u001b[39m         } \u001b[36melse\u001b[39m {\n \u001b[90m  99 |\u001b[39m             console\u001b[33m.\u001b[39mlog(\u001b[32m'✗ No timestamps found in the grid'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 100 |\u001b[39m             \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m'No timestamps found in Cities Master grid'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at /Users/thilinaweerasinghe/Desktop/untitled folder 3/tests/cities-master.spec.ts:97:41\u001b[22m"
-                        }
-                      ],
+                      "status": "passed",
+                      "duration": 20374,
+                      "errors": [],
                       "stdout": [
                         {
-                          "text": "\n=== TC_CITIES_MASTER_001: Cities Master Sync with Time Validation ===\n\n"
+                          "text": "\n=== TC_REASONS_TYPE_MASTER_003: Duplicate Code Validation ===\n"
                         },
                         {
-                          "text": "✓ Navigating to Cities Master\n"
+                          "text": "✓ Navigating to Reasons Type Master\n"
                         },
                         {
                           "text": "✓ Clicked on Masters menu\n"
                         },
                         {
-                          "text": "✓ Clicked on Cities menu item\n"
+                          "text": "✓ Clicked on Reasons Type menu item\n"
                         },
                         {
-                          "text": "✓ Cities Master page loaded with grid\n"
+                          "text": "✓ Creating Reason Type: DUP_1770275399100 - First Reason\n"
                         },
                         {
-                          "text": "✓ Last Synced Date column found\n"
+                          "text": "✓ Creating Reason Type: DUP_1770275399100 - Duplicate Reason\n"
                         },
                         {
-                          "text": "Real-time captured (Sri Lanka): 2026-02-04 06:20:12\n"
-                        },
-                        {
-                          "text": "Expected date in grid: 2026-02-04\n"
-                        },
-                        {
-                          "text": "✓ Sync All button is visible\n"
-                        },
-                        {
-                          "text": "✓ Clicked Sync All button\n"
-                        },
-                        {
-                          "text": "\n✓ Found 10 timestamp(s) in grid\n"
-                        },
-                        {
-                          "text": "\nFirst 3 timestamp(s):\n"
-                        },
-                        {
-                          "text": "  1. 2026-02-03 14:53:18\n"
-                        },
-                        {
-                          "text": "  2. 2026-02-03 14:53:18\n"
-                        },
-                        {
-                          "text": "  3. 2026-02-03 14:53:18\n"
-                        },
-                        {
-                          "text": "\n✓ 0 out of 10 timestamps match today's date (2026-02-04)\n"
-                        },
-                        {
-                          "text": "\n✗ VALIDATION FAILED: No timestamps match the current date\n"
-                        },
-                        {
-                          "text": "Expected date: 2026-02-04\n"
-                        },
-                        {
-                          "text": "Actual timestamps: 2026-02-03 14:53:18, 2026-02-03 14:53:18, 2026-02-03 14:53:18\n"
-                        },
-                        {
-                          "text": "⚠ BUG: Timestamps are not updating to current Sri Lankan time\n"
+                          "text": "✓ Duplicate code error message displayed: \"This code already exists.\"\n"
                         }
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-02-04T06:20:00.609Z",
+                      "startTime": "2026-02-05T07:09:59.123Z",
                       "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/Users/thilinaweerasinghe/Desktop/untitled folder 3/test-results/cities-master-Cities-Maste-8adef--All-and-local-time-display-chromium/test-failed-1.png"
-                        },
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "/Users/thilinaweerasinghe/Desktop/untitled folder 3/test-results/cities-master-Cities-Maste-8adef--All-and-local-time-display-chromium/video.webm"
-                        },
-                        {
-                          "name": "error-context",
-                          "contentType": "text/markdown",
-                          "path": "/Users/thilinaweerasinghe/Desktop/untitled folder 3/test-results/cities-master-Cities-Maste-8adef--All-and-local-time-display-chromium/error-context.md"
-                        }
-                      ],
-                      "errorLocation": {
-                        "file": "/Users/thilinaweerasinghe/Desktop/untitled folder 3/tests/cities-master.spec.ts",
-                        "column": 41,
-                        "line": 97
-                      }
+                      "attachments": []
                     }
                   ],
-                  "status": "unexpected"
+                  "status": "expected"
                 }
               ],
-              "id": "34de60ea409bedb3643d-d57f43d7fdbefbee10e8",
-              "file": "cities-master.spec.ts",
-              "line": 20,
-              "column": 9
-            },
-            {
-              "title": "TC_CITIES_MASTER_002: Verify Sync All button updates cities records",
-              "ok": false,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 0,
-                      "status": "failed",
-                      "duration": 19825,
-                      "error": {
-                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n    at /Users/thilinaweerasinghe/Desktop/untitled folder 3/tests/cities-master.spec.ts:125:28",
-                        "location": {
-                          "file": "/Users/thilinaweerasinghe/Desktop/untitled folder 3/tests/cities-master.spec.ts",
-                          "column": 28,
-                          "line": 125
-                        },
-                        "snippet": "\u001b[0m \u001b[90m 123 |\u001b[39m\n \u001b[90m 124 |\u001b[39m         \u001b[90m// Verify sync occurred (count should be > 0)\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 125 |\u001b[39m         expect(finalCount)\u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 126 |\u001b[39m         console\u001b[33m.\u001b[39mlog(\u001b[32m'✓ Cities synced successfully'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 127 |\u001b[39m\n \u001b[90m 128 |\u001b[39m         console\u001b[33m.\u001b[39mlog(\u001b[32m'\\n=== Test Completed ===\\n'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
-                      },
-                      "errors": [
-                        {
-                          "location": {
-                            "file": "/Users/thilinaweerasinghe/Desktop/untitled folder 3/tests/cities-master.spec.ts",
-                            "column": 28,
-                            "line": 125
-                          },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n\n\u001b[0m \u001b[90m 123 |\u001b[39m\n \u001b[90m 124 |\u001b[39m         \u001b[90m// Verify sync occurred (count should be > 0)\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 125 |\u001b[39m         expect(finalCount)\u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 126 |\u001b[39m         console\u001b[33m.\u001b[39mlog(\u001b[32m'✓ Cities synced successfully'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 127 |\u001b[39m\n \u001b[90m 128 |\u001b[39m         console\u001b[33m.\u001b[39mlog(\u001b[32m'\\n=== Test Completed ===\\n'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at /Users/thilinaweerasinghe/Desktop/untitled folder 3/tests/cities-master.spec.ts:125:28\u001b[22m"
-                        }
-                      ],
-                      "stdout": [
-                        {
-                          "text": "\n=== TC_CITIES_MASTER_002: Sync Status Validation ===\n\n"
-                        },
-                        {
-                          "text": "✓ Navigating to Cities Master\n"
-                        },
-                        {
-                          "text": "✓ Clicked on Masters menu\n"
-                        },
-                        {
-                          "text": "✓ Clicked on Cities menu item\n"
-                        },
-                        {
-                          "text": "Initial cities count: 0\n"
-                        },
-                        {
-                          "text": "✓ Sync All button is visible\n"
-                        },
-                        {
-                          "text": "✓ Clicked Sync All button\n"
-                        },
-                        {
-                          "text": "✓ Clicked Sync All\n"
-                        },
-                        {
-                          "text": "Final cities count: 0\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-02-04T06:20:17.615Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/Users/thilinaweerasinghe/Desktop/untitled folder 3/test-results/cities-master-Cities-Maste-4ccc4-tton-updates-cities-records-chromium/test-failed-1.png"
-                        },
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "/Users/thilinaweerasinghe/Desktop/untitled folder 3/test-results/cities-master-Cities-Maste-4ccc4-tton-updates-cities-records-chromium/video.webm"
-                        },
-                        {
-                          "name": "error-context",
-                          "contentType": "text/markdown",
-                          "path": "/Users/thilinaweerasinghe/Desktop/untitled folder 3/test-results/cities-master-Cities-Maste-4ccc4-tton-updates-cities-records-chromium/error-context.md"
-                        }
-                      ],
-                      "errorLocation": {
-                        "file": "/Users/thilinaweerasinghe/Desktop/untitled folder 3/tests/cities-master.spec.ts",
-                        "column": 28,
-                        "line": 125
-                      }
-                    }
-                  ],
-                  "status": "unexpected"
-                }
-              ],
-              "id": "34de60ea409bedb3643d-f2cb9c6516ca76a12b1b",
-              "file": "cities-master.spec.ts",
-              "line": 106,
-              "column": 9
+              "id": "702627e018c8cf1b9aae-ab3edb495c4487b5287b",
+              "file": "2_19_reasons-type-master.spec.ts",
+              "line": 66,
+              "column": 7
             }
           ]
         }
@@ -323,11 +142,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-02-04T06:20:00.156Z",
-    "duration": 37721.154,
-    "expected": 0,
+    "startTime": "2026-02-05T07:09:54.790Z",
+    "duration": 25757.482,
+    "expected": 1,
     "skipped": 0,
-    "unexpected": 2,
+    "unexpected": 0,
     "flaky": 0
   }
 }
