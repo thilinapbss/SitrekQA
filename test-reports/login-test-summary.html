@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SITREK Login Test Summary Report</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .summary-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 30px;
+            background: #f8f9fa;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .stat-number {
+            font-size: 3em;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .stat-label {
+            color: #666;
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .passed { color: #28a745; }
+        .failed { color: #dc3545; }
+        .total { color: #667eea; }
+        .rate { color: #17a2b8; }
+
+        .content {
+            padding: 40px;
+        }
+
+        .test-suite {
+            margin-bottom: 40px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .suite-header {
+            background: #f8f9fa;
+            padding: 20px;
+            border-bottom: 2px solid #667eea;
+        }
+
+        .suite-title {
+            font-size: 1.5em;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .suite-meta {
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        .suite-meta span {
+            margin-right: 20px;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.8em;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .badge.high { background: #ff4757; color: white; }
+        .badge.critical { background: #dc3545; color: white; }
+        .badge.medium { background: #ffa502; color: white; }
+        .badge.positive { background: #28a745; color: white; }
+        .badge.negative { background: #6c757d; color: white; }
+        .badge.security { background: #e74c3c; color: white; }
+
+        .test-cases {
+            padding: 0;
+        }
+
+        .test-case {
+            padding: 15px 20px;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: background 0.3s;
+        }
+
+        .test-case:hover {
+            background: #f8f9fa;
+        }
+
+        .test-case:last-child {
+            border-bottom: none;
+        }
+
+        .test-name {
+            flex: 1;
+            font-size: 1em;
+        }
+
+        .test-status {
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.85em;
+        }
+
+        .test-status.pass {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .test-status.fail {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        .icon {
+            margin-right: 10px;
+        }
+
+        .icon.pass::before {
+            content: "✓";
+            color: #28a745;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        .icon.fail::before {
+            content: "✗";
+            color: #dc3545;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        .footer {
+            background: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            color: #666;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .timestamp {
+            font-size: 0.9em;
+            margin-top: 10px;
+        }
+
+        .browsers {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .browser-tag {
+            background: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        @media print {
+            body {
+                background: white;
+            }
+            .container {
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔐 SITREK Login Test Report</h1>
+            <p>Comprehensive Test Coverage for User Authentication</p>
+        </div>
+
+        <div class="summary-stats">
+            <div class="stat-card">
+                <div class="stat-label">Total Tests</div>
+                <div class="stat-number total">13</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Passed</div>
+                <div class="stat-number passed">13</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Failed</div>
+                <div class="stat-number failed">0</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Success Rate</div>
+                <div class="stat-number rate">100%</div>
+            </div>
+        </div>
+
+        <div class="content">
+            <!-- TC_LOGIN_001 -->
+            <div class="test-suite">
+                <div class="suite-header">
+                    <div class="suite-title">TC_LOGIN_001: Login Validation - Empty Fields</div>
+                    <div class="suite-meta">
+                        <span><strong>Priority:</strong> <span class="badge high">High</span></span>
+                        <span><strong>Type:</strong> <span class="badge negative">Negative</span></span>
+                        <span><strong>Tests:</strong> 3</span>
+                    </div>
+                </div>
+                <div class="test-cases">
+                    <div class="test-case">
+                        <span class="icon pass"></span>
+                        <span class="test-name">Should show "Username is required" error when username is empty</span>
+                        <span class="test-status pass">PASS</span>
+                    </div>
+                    <div class="test-case">
+                        <span class="icon pass"></span>
+                        <span class="test-name">Should show "Password is required" error when password is empty</span>
+                        <span class="test-status pass">PASS</span>
+                    </div>
+                    <div class="test-case">
+                        <span class="icon pass"></span>
+                        <span class="test-name">Should show both "Username is required" and "Password is required" errors when both fields are empty</span>
+                        <span class="test-status pass">PASS</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TC_LOGIN_002 -->
+            <div class="test-suite">
+                <div class="suite-header">
+                    <div class="suite-title">TC_LOGIN_002: Login Fails with Invalid Credentials</div>
+                    <div class="suite-meta">
+                        <span><strong>Priority:</strong> <span class="badge high">High</span></span>
+                        <span><strong>Type:</strong> <span class="badge negative">Negative</span></span>
+                        <span><strong>Tests:</strong> 3</span>
+                    </div>
+                </div>
+                <div class="test-cases">
+                    <div class="test-case">
+                        <span class="icon pass"></span>
+                        <span class="test-name">Should fail with invalid username</span>
+                        <span class="test-status pass">PASS</span>
+                    </div>
+                    <div class="test-case">
+                        <span class="icon pass"></span>
+                        <span class="test-name">Should fail with invalid password</span>
+                        <span class="test-status pass">PASS</span>
+                    </div>
+                    <div class="test-case">
+                        <span class="icon pass"></span>
+                        <span class="test-name">Should fail when both username and password are invalid</span>
+                        <span class="test-status pass">PASS</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TC_LOGIN_003 -->
+            <div class="test-suite">
+                <div class="suite-header">
+                    <div class="suite-title">TC_LOGIN_003: Login Security - SQL Injection and Special Characters</div>
+                    <div class="suite-meta">
+                        <span><strong>Priority:</strong> <span class="badge high">High</span></span>
+                        <span><strong>Type:</strong> <span class="badge security">Security</span></span>
+                        <span><strong>Tests:</strong> 3</span>
+                    </div>
+                </div>
+                <div class="test-cases">
+                    <div class="test-case">
+                        <span class="icon pass"></span>
+                        <span class="test-name">Should prevent SQL injection attack</span>
+                        <span class="test-status pass">PASS</span>
+                    </div>
+                    <div class="test-case">
+                        <span class="icon pass"></span>
+                        <span class="test-name">Should handle special characters in username</span>
+                        <span class="test-status pass">PASS</span>
+                    </div>
+                    <div class="test-case">
+                        <span class="icon pass"></span>
+                        <span class="test-name">Should prevent XSS attack</span>
+                        <span class="test-status pass">PASS</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TC_LOGIN_004 -->
+            <div class="test-suite">
+                <div class="suite-header">
+                    <div class="suite-title">TC_LOGIN_004: Login Edge Cases - Case Sensitivity and Whitespace</div>
+                    <div class="suite-meta">
+                        <span><strong>Priority:</strong> <span class="badge medium">Medium</span></span>
+                        <span><strong>Type:</strong> <span class="badge negative">Negative</span></span>
+                        <span><strong>Tests:</strong> 3</span>
+                    </div>
+                </div>
+                <div class="test-cases">
+                    <div class="test-case">
+                        <span class="icon pass"></span>
+                        <span class="test-name">Should fail with wrong case in password</span>
+                        <span class="test-status pass">PASS</span>
+                    </div>
+                    <div class="test-case">
+                        <span class="icon pass"></span>
+                        <span class="test-name">Should handle whitespace in username</span>
+                        <span class="test-status pass">PASS</span>
+                    </div>
+                    <div class="test-case">
+                        <span class="icon pass"></span>
+                        <span class="test-name">Should handle uppercase username</span>
+                        <span class="test-status pass">PASS</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TC_LOGIN_005 -->
+            <div class="test-suite">
+                <div class="suite-header">
+                    <div class="suite-title">TC_LOGIN_005: Successful Login with Operation User</div>
+                    <div class="suite-meta">
+                        <span><strong>Priority:</strong> <span class="badge critical">Critical</span></span>
+                        <span><strong>Type:</strong> <span class="badge positive">Positive</span></span>
+                        <span><strong>Tests:</strong> 1</span>
+                    </div>
+                </div>
+                <div class="test-cases">
+                    <div class="test-case">
+                        <span class="icon pass"></span>
+                        <span class="test-name">Should successfully login with valid operation user credentials</span>
+                        <span class="test-status pass">PASS</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="browsers">
+                <span class="browser-tag">🌐 Chromium</span>
+                <span class="browser-tag">🦊 Firefox</span>
+                <span class="browser-tag">🧭 WebKit</span>
+            </div>
+            <div class="timestamp">
+                <strong>Test Execution Date:</strong> February 4, 2026<br>
+                <strong>Application:</strong> SITREK (https://111.119.245.10:20081/)<br>
+                <strong>Framework:</strong> Playwright with TypeScript (Page Object Model)
+            </div>
+        </div>
+    </div>
+</body>
+</html>

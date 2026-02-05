@@ -1,0 +1,93 @@
+{
+  "validUsers": [
+    {
+      "username": "chathura",
+      "password": "Admin@1234",
+      "role": "operation",
+      "testCaseId": "TC_LOGIN_005"
+    }
+  ],
+  "emptyFieldTests": [
+    {
+      "username": "",
+      "password": "Admin@1234",
+      "expectedError": "Username is required",
+      "testCaseId": "TC_LOGIN_001"
+    },
+    {
+      "username": "chathura",
+      "password": "",
+      "expectedError": "Password is required",
+      "testCaseId": "TC_LOGIN_001"
+    },
+    {
+      "username": "",
+      "password": "",
+      "expectedError": "Username is required, Password is required",
+      "testCaseId": "TC_LOGIN_001"
+    }
+  ],
+  "invalidCredentials": [
+    {
+      "username": "invaliduser",
+      "password": "Admin@1234",
+      "reason": "Invalid username",
+      "expectedError": "Invalid credentials",
+      "testCaseId": "TC_LOGIN_002"
+    },
+    {
+      "username": "chathura",
+      "password": "WrongPassword123",
+      "reason": "Invalid password",
+      "expectedError": "Invalid credentials",
+      "testCaseId": "TC_LOGIN_002"
+    },
+    {
+      "username": "wronguser",
+      "password": "wrongpassword",
+      "reason": "Both invalid",
+      "expectedError": "Invalid credentials",
+      "testCaseId": "TC_LOGIN_002"
+    }
+  ],
+  "securityTests": [
+    {
+      "username": "admin' OR '1'='1",
+      "password": "anything",
+      "type": "SQL Injection",
+      "testCaseId": "TC_LOGIN_003"
+    },
+    {
+      "username": "user@#$%",
+      "password": "Admin@1234",
+      "type": "Special Characters",
+      "testCaseId": "TC_LOGIN_003"
+    },
+    {
+      "username": "<script>alert('xss')</script>",
+      "password": "test",
+      "type": "XSS Attempt",
+      "testCaseId": "TC_LOGIN_003"
+    }
+  ],
+  "edgeCaseTests": [
+    {
+      "username": "chathura",
+      "password": "admin@1234",
+      "reason": "Wrong case in password",
+      "testCaseId": "TC_LOGIN_004"
+    },
+    {
+      "username": " chathura ",
+      "password": "Admin@1234",
+      "reason": "Whitespace in username",
+      "testCaseId": "TC_LOGIN_004"
+    },
+    {
+      "username": "CHATHURA",
+      "password": "Admin@1234",
+      "reason": "Uppercase username",
+      "testCaseId": "TC_LOGIN_004"
+    }
+  ]
+}
