@@ -1,0 +1,351 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - button [ref=e5] [cursor=pointer]:
+      - img [ref=e6]
+    - region "scrollable content" [ref=e12]:
+      - navigation [ref=e14]:
+        - list [ref=e15]:
+          - listitem [ref=e16]:
+            - generic [ref=e17] [cursor=pointer]:
+              - img [ref=e18]
+              - text: Overview
+            - list [ref=e23]:
+              - listitem [ref=e24]:
+                - link "Dashboard" [ref=e25] [cursor=pointer]:
+                  - /url: /dashboard
+                  - generic [ref=e29]: Dashboard
+          - listitem [ref=e30]:
+            - generic [ref=e31] [cursor=pointer]:
+              - img [ref=e32]
+              - text: Masters
+            - list [ref=e37]:
+              - listitem [ref=e38]:
+                - button "Masters" [ref=e39] [cursor=pointer]:
+                  - generic [ref=e43]: Masters
+                  - img [ref=e44]
+                - list [ref=e49]:
+                  - listitem [ref=e50]:
+                    - link "Branch" [ref=e51] [cursor=pointer]:
+                      - /url: /dashboard/masters/branch_master
+                      - generic [ref=e53]: Branch
+                  - listitem [ref=e54]:
+                    - link "Division" [ref=e55] [cursor=pointer]:
+                      - /url: /dashboard/masters/division_master
+                      - generic [ref=e57]: Division
+                  - listitem [ref=e58]:
+                    - link "Designation" [ref=e59] [cursor=pointer]:
+                      - /url: /dashboard/masters/designation_master
+                      - generic [ref=e61]: Designation
+                  - listitem [ref=e62]:
+                    - link "Employee" [ref=e63] [cursor=pointer]:
+                      - /url: /dashboard/masters/employee_master
+                      - generic [ref=e65]: Employee
+                  - listitem [ref=e66]:
+                    - link "Vehicle" [ref=e67] [cursor=pointer]:
+                      - /url: /dashboard/masters/vehicle_master
+                      - generic [ref=e69]: Vehicle
+                  - listitem [ref=e70]:
+                    - link "Equipment Type" [ref=e71] [cursor=pointer]:
+                      - /url: /dashboard/masters/equipmenttype_master
+                      - generic [ref=e73]: Equipment Type
+                  - listitem [ref=e74]:
+                    - link "Equipment" [ref=e75] [cursor=pointer]:
+                      - /url: /dashboard/masters/equipment_master
+                      - generic [ref=e77]: Equipment
+                  - listitem [ref=e78]:
+                    - link "Route" [ref=e79] [cursor=pointer]:
+                      - /url: /dashboard/masters/route_master
+                      - generic [ref=e81]: Route
+                  - listitem [ref=e82]:
+                    - link "Agreement" [ref=e83] [cursor=pointer]:
+                      - /url: /dashboard/masters/agreement_master
+                      - generic [ref=e85]: Agreement
+                  - listitem [ref=e86]:
+                    - link "ATM" [ref=e87] [cursor=pointer]:
+                      - /url: /dashboard/masters/atm_master
+                      - generic [ref=e89]: ATM
+                  - listitem [ref=e90]:
+                    - link "ATM Cities" [ref=e91] [cursor=pointer]:
+                      - /url: /dashboard/masters/atm_cities_master
+                      - generic [ref=e93]: ATM Cities
+                  - listitem [ref=e94]:
+                    - link "Weapon" [active] [ref=e95] [cursor=pointer]:
+                      - /url: /dashboard/masters/weapon_master
+                      - generic [ref=e97]: Weapon
+                  - listitem [ref=e98]:
+                    - link "Denomination" [ref=e99] [cursor=pointer]:
+                      - /url: /dashboard/masters/denomination_master
+                      - generic [ref=e101]: Denomination
+                  - listitem [ref=e102]:
+                    - link "Customer" [ref=e103] [cursor=pointer]:
+                      - /url: /dashboard/masters/customer_master
+                      - generic [ref=e105]: Customer
+                  - listitem [ref=e106]:
+                    - link "Cities" [ref=e107] [cursor=pointer]:
+                      - /url: /dashboard/masters/cities_master
+                      - generic [ref=e109]: Cities
+                  - listitem [ref=e110]:
+                    - link "Collection Type" [ref=e111] [cursor=pointer]:
+                      - /url: /dashboard/masters/collection_type_master
+                      - generic [ref=e113]: Collection Type
+                  - listitem [ref=e114]:
+                    - link "Reasons Type" [ref=e115] [cursor=pointer]:
+                      - /url: /dashboard/masters/reasons_types_master
+                      - generic [ref=e117]: Reasons Type
+                  - listitem [ref=e118]:
+                    - link "Seal" [ref=e119] [cursor=pointer]:
+                      - /url: /dashboard/masters/seal_master
+                      - generic [ref=e121]: Seal
+                  - listitem [ref=e122]:
+                    - link "Synced Denomination Master" [ref=e123] [cursor=pointer]:
+                      - /url: /dashboard/masters/synced_denomination_master
+                      - generic [ref=e125]: Synced Denomination Master
+                  - listitem [ref=e126]:
+                    - link "Vault Locations" [ref=e127] [cursor=pointer]:
+                      - /url: /dashboard/masters/vault_location_master
+                      - generic [ref=e129]: Vault Locations
+          - listitem [ref=e130]:
+            - generic [ref=e131] [cursor=pointer]:
+              - img [ref=e132]
+              - text: Jobs
+            - list [ref=e137]:
+              - listitem [ref=e138]:
+                - button "Jobs" [ref=e139] [cursor=pointer]:
+                  - generic [ref=e143]: Jobs
+                  - img [ref=e144]
+          - listitem [ref=e146]:
+            - generic [ref=e147] [cursor=pointer]:
+              - img [ref=e148]
+              - text: Reconcilation Department
+            - list [ref=e153]:
+              - listitem [ref=e154]:
+                - button "Reconcilation Department" [ref=e155] [cursor=pointer]:
+                  - generic [ref=e159]: Reconcilation Department
+                  - img [ref=e160]
+          - listitem [ref=e162]:
+            - generic [ref=e163] [cursor=pointer]:
+              - img [ref=e164]
+              - text: ATM Cash Management
+            - list [ref=e169]:
+              - listitem [ref=e170]:
+                - button "ATM Cash Management" [ref=e171] [cursor=pointer]:
+                  - generic [ref=e175]: ATM Cash Management
+                  - img [ref=e176]
+          - listitem [ref=e178]:
+            - generic [ref=e179] [cursor=pointer]:
+              - img [ref=e180]
+              - text: ATM Breakdown
+            - list [ref=e185]:
+              - listitem [ref=e186]:
+                - button "ATM Breakdown" [ref=e187] [cursor=pointer]:
+                  - generic [ref=e191]: ATM Breakdown
+                  - img [ref=e192]
+          - listitem [ref=e194]:
+            - generic [ref=e195] [cursor=pointer]:
+              - img [ref=e196]
+              - text: Cash Preparation Unit
+            - list [ref=e201]:
+              - listitem [ref=e202]:
+                - button "Cash Preparation Unit" [ref=e203] [cursor=pointer]:
+                  - generic [ref=e207]: Cash Preparation Unit
+                  - img [ref=e208]
+          - listitem [ref=e210]:
+            - generic [ref=e211] [cursor=pointer]:
+              - img [ref=e212]
+              - text: Cash Management
+            - list [ref=e217]:
+              - listitem [ref=e218]:
+                - button "Cash Management" [ref=e219] [cursor=pointer]:
+                  - generic [ref=e223]: Cash Management
+                  - img [ref=e224]
+          - listitem [ref=e226]:
+            - generic [ref=e227] [cursor=pointer]:
+              - img [ref=e228]
+              - text: Armoury
+            - list [ref=e233]:
+              - listitem [ref=e234]:
+                - button "Armoury" [ref=e235] [cursor=pointer]:
+                  - generic [ref=e239]: Armoury
+                  - img [ref=e240]
+          - listitem [ref=e242]:
+            - generic [ref=e243] [cursor=pointer]:
+              - img [ref=e244]
+              - text: Vault
+            - list [ref=e249]:
+              - listitem [ref=e250]:
+                - button "Vault" [ref=e251] [cursor=pointer]:
+                  - generic [ref=e255]: Vault
+                  - img [ref=e256]
+          - listitem [ref=e258]:
+            - generic [ref=e259] [cursor=pointer]:
+              - img [ref=e260]
+              - text: Approvals
+            - list [ref=e265]:
+              - listitem [ref=e266]:
+                - button "Approvals" [ref=e267] [cursor=pointer]:
+                  - generic [ref=e271]: Approvals
+                  - img [ref=e272]
+          - listitem [ref=e274]:
+            - generic [ref=e275] [cursor=pointer]:
+              - img [ref=e276]
+              - text: Management
+            - list [ref=e281]:
+              - listitem [ref=e282]:
+                - button "User Management" [ref=e283] [cursor=pointer]:
+                  - generic [ref=e287]: User Management
+                  - img [ref=e288]
+          - listitem [ref=e290]:
+            - generic [ref=e291] [cursor=pointer]:
+              - img [ref=e292]
+              - text: Log History
+            - list [ref=e297]:
+              - listitem [ref=e298]:
+                - button "Log History" [ref=e299] [cursor=pointer]:
+                  - generic [ref=e303]: Log History
+                  - img [ref=e304]
+  - generic [ref=e306]:
+    - banner [ref=e307]:
+      - generic [ref=e310]:
+        - button "settings" [ref=e311] [cursor=pointer]:
+          - img [ref=e313]
+        - button [ref=e316] [cursor=pointer]:
+          - img [ref=e319]
+    - main [ref=e322]:
+      - generic [ref=e323]:
+        - generic [ref=e326]:
+          - heading "Weapon Master" [level=4] [ref=e327]
+          - navigation [ref=e328]:
+            - list [ref=e329]:
+              - listitem [ref=e330]:
+                - link "Masters" [ref=e331] [cursor=pointer]:
+                  - /url: /dashboard/masters/weapon_master
+              - listitem [ref=e332]
+              - listitem [ref=e334]:
+                - generic: Weapon
+        - generic [ref=e335]:
+          - generic [ref=e336]:
+            - heading "Weapons List" [level=6] [ref=e337]
+            - button "Sync All" [ref=e339] [cursor=pointer]: Sync All
+          - generic [ref=e340]:
+            - grid [ref=e341]:
+              - row "Name Liscence Number Current Status Model Number Tag Number Branch Department" [ref=e342]:
+                - columnheader "Name" [ref=e343] [cursor=pointer]:
+                  - generic [ref=e345]: Name
+                  - generic [ref=e346]:
+                    - img
+                - columnheader "Liscence Number" [ref=e347] [cursor=pointer]:
+                  - generic [ref=e349]: Liscence Number
+                  - generic [ref=e350]:
+                    - img
+                - columnheader "Current Status" [ref=e351] [cursor=pointer]:
+                  - generic [ref=e353]: Current Status
+                  - generic [ref=e354]:
+                    - img
+                - columnheader "Model Number" [ref=e355] [cursor=pointer]:
+                  - generic [ref=e357]: Model Number
+                  - generic [ref=e358]:
+                    - img
+                - columnheader "Tag Number" [ref=e359] [cursor=pointer]:
+                  - generic [ref=e361]: Tag Number
+                  - generic [ref=e362]:
+                    - img
+                - columnheader "Branch" [ref=e363] [cursor=pointer]:
+                  - generic [ref=e365]: Branch
+                  - generic [ref=e366]:
+                    - img
+                - columnheader "Department" [ref=e367] [cursor=pointer]:
+                  - generic [ref=e369]: Department
+                  - generic [ref=e370]:
+                    - img
+              - rowgroup [ref=e371]:
+                - row "Repeater - 20798 34654785423 Used 1 20798 1018 1" [ref=e372]:
+                  - gridcell "Repeater - 20798" [ref=e373]
+                  - gridcell "34654785423" [ref=e374]
+                  - gridcell "Used" [ref=e375]
+                  - gridcell "1" [ref=e376]
+                  - gridcell "20798" [ref=e377]
+                  - gridcell "1018" [ref=e378]
+                  - gridcell "1" [ref=e379]
+                - row "Repeater-74349 272723 Not Used 1 74349 1018 1" [ref=e380]:
+                  - gridcell "Repeater-74349" [ref=e381]
+                  - gridcell "272723" [ref=e382]
+                  - gridcell "Not Used" [ref=e383]
+                  - gridcell "1" [ref=e384]
+                  - gridcell "74349" [ref=e385]
+                  - gridcell "1018" [ref=e386]
+                  - gridcell "1" [ref=e387]
+                - row "Repeater-74366 Not Used 1 74366 1018 1" [ref=e388]:
+                  - gridcell "Repeater-74366" [ref=e389]
+                  - gridcell [ref=e390]
+                  - gridcell "Not Used" [ref=e391]
+                  - gridcell "1" [ref=e392]
+                  - gridcell "74366" [ref=e393]
+                  - gridcell "1018" [ref=e394]
+                  - gridcell "1" [ref=e395]
+                - row "Repeater-74357 23456789o Not Used 1 74349 1018 1" [ref=e396]:
+                  - gridcell "Repeater-74357" [ref=e397]
+                  - gridcell "23456789o" [ref=e398]
+                  - gridcell "Not Used" [ref=e399]
+                  - gridcell "1" [ref=e400]
+                  - gridcell "74349" [ref=e401]
+                  - gridcell "1018" [ref=e402]
+                  - gridcell "1" [ref=e403]
+                - row "Repeater-74358 Not Used 1 74358 1018 1" [ref=e404]:
+                  - gridcell "Repeater-74358" [ref=e405]
+                  - gridcell [ref=e406]
+                  - gridcell "Not Used" [ref=e407]
+                  - gridcell "1" [ref=e408]
+                  - gridcell "74358" [ref=e409]
+                  - gridcell "1018" [ref=e410]
+                  - gridcell "1" [ref=e411]
+                - row "Repeater-20792 Not Used 1 20792 1018 1" [ref=e412]:
+                  - gridcell "Repeater-20792" [ref=e413]
+                  - gridcell [ref=e414]
+                  - gridcell "Not Used" [ref=e415]
+                  - gridcell "1" [ref=e416]
+                  - gridcell "20792" [ref=e417]
+                  - gridcell "1018" [ref=e418]
+                  - gridcell "1" [ref=e419]
+                - row "Repeater - 20801 1114500003 Not Used 1 20801 1018 1" [ref=e420]:
+                  - gridcell "Repeater - 20801" [ref=e421]
+                  - gridcell "1114500003" [ref=e422]
+                  - gridcell "Not Used" [ref=e423]
+                  - gridcell "1" [ref=e424]
+                  - gridcell "20801" [ref=e425]
+                  - gridcell "1018" [ref=e426]
+                  - gridcell "1" [ref=e427]
+                - row "Repeater-74373 Not Used 1 74373 1018 1" [ref=e428]:
+                  - gridcell "Repeater-74373" [ref=e429]
+                  - gridcell [ref=e430]
+                  - gridcell "Not Used" [ref=e431]
+                  - gridcell "1" [ref=e432]
+                  - gridcell "74373" [ref=e433]
+                  - gridcell "1018" [ref=e434]
+                  - gridcell "1" [ref=e435]
+                - row "Repeater-74360 8683 Not Used 1 074360 1018 1" [ref=e436]:
+                  - gridcell "Repeater-74360" [ref=e437]
+                  - gridcell "8683" [ref=e438]
+                  - gridcell "Not Used" [ref=e439]
+                  - gridcell "1" [ref=e440]
+                  - gridcell "074360" [ref=e441]
+                  - gridcell "1018" [ref=e442]
+                  - gridcell "1" [ref=e443]
+                - row "85 234328 Not Used 1 74361 1018 1" [ref=e444]:
+                  - gridcell "85" [ref=e445]
+                  - gridcell "234328" [ref=e446]
+                  - gridcell "Not Used" [ref=e447]
+                  - gridcell "1" [ref=e448]
+                  - gridcell "74361" [ref=e449]
+                  - gridcell "1018" [ref=e450]
+                  - gridcell "1" [ref=e451]
+            - generic [ref=e457]:
+              - paragraph [ref=e458]: 1–10 of 49
+              - generic [ref=e459]:
+                - button "Go to previous page" [disabled]:
+                  - img
+                - button "Go to next page" [ref=e460] [cursor=pointer]:
+                  - img [ref=e461]
+```

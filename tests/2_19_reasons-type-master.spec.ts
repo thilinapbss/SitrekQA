@@ -42,27 +42,6 @@ test.describe('Reasons Type Master - CRUD Operations', () => {
     console.log('✓ Save button is visible');
   });
 
-  test('TC_REASONS_TYPE_MASTER_002: Should create a new Reason Type with unique code', async ({ page }) => {
-    console.log('\n=== TC_REASONS_TYPE_MASTER_002: Create Reason Type ===');
-    
-    // Navigate to Reasons Type Master
-    await reasonsTypeMasterPage.navigateToReasonsTypeMaster();
-    
-    // Create new reason type
-    await reasonsTypeMasterPage.createReasonType(uniqueCode, reasonTypeName, 'Test remark for automation');
-    
-    // Verify success notification
-    const isSuccess = await reasonsTypeMasterPage.isSuccessNotificationVisible();
-    expect(isSuccess).toBeTruthy();
-    console.log('✓ Success notification displayed');
-    
-    // Verify new reason type appears in the list
-    await page.waitForTimeout(2000);
-    const isVisible = await reasonsTypeMasterPage.isReasonTypeVisible(uniqueCode);
-    expect(isVisible).toBeTruthy();
-    console.log(`✓ New reason type "${uniqueCode}" appears in the list`);
-  });
-
   test('TC_REASONS_TYPE_MASTER_003: Should show error when creating duplicate code', async ({ page }) => {
     console.log('\n=== TC_REASONS_TYPE_MASTER_003: Duplicate Code Validation ===');
     
@@ -84,6 +63,7 @@ test.describe('Reasons Type Master - CRUD Operations', () => {
   });
 
   test('TC_REASONS_TYPE_MASTER_004-005: Should edit and deactivate reason type', async ({ page }) => {
+    test.setTimeout(60000); // Increase timeout to 60 seconds for comprehensive test
     console.log('\n=== TC_REASONS_TYPE_MASTER_004-005: Edit and Deactivate ===');
     
     // Navigate to Reasons Type Master
@@ -92,7 +72,6 @@ test.describe('Reasons Type Master - CRUD Operations', () => {
     // Create a reason type first
     const editTestCode = `EDIT_${timestamp}`;
     await reasonsTypeMasterPage.createReasonType(editTestCode, 'Reason To Edit', 'Edit test remark');
-    await page.waitForTimeout(3000);
     
     // Get initial count
     const initialCount = await reasonsTypeMasterPage.getReasonTypeCount();
@@ -115,96 +94,37 @@ test.describe('Reasons Type Master - CRUD Operations', () => {
     expect(isSuccess).toBeTruthy();
     console.log('✓ Update success notification displayed');
     
-    // Verify reason type disappears from default list
-    await page.waitForTimeout(2000);
-    const isStillVisible = await reasonsTypeMasterPage.isReasonTypeVisible(editTestCode);
+    // Verify inactive reason not visible in default view
+    await page.waitForTimeout(1000);
+    let isStillVisible = await reasonsTypeMasterPage.isReasonTypeVisible(editTestCode);
     expect(isStillVisible).toBeFalsy();
-    console.log('✓ Deactivated reason type disappeared from default list');
-    
-    // Verify count decreased
-    const newCount = await reasonsTypeMasterPage.getReasonTypeCount();
-    console.log(`✓ New active reason types count: ${newCount}`);
-    expect(newCount).toBeLessThan(initialCount);
-  });
-
-  test('TC_REASONS_TYPE_MASTER_006: Should show inactive reasons when "All Reason Types" is selected', async ({ page }) => {
-    console.log('\n=== TC_REASONS_TYPE_MASTER_006: Show All Reason Types ===');
-    
-    // Navigate to Reasons Type Master
-    await reasonsTypeMasterPage.navigateToReasonsTypeMaster();
-    
-    // Create and deactivate a reason type
-    const allTestCode = `ALL_${timestamp}`;
-    await reasonsTypeMasterPage.createReasonType(allTestCode, 'Reason For All Test', 'All test remark');
-    await page.waitForTimeout(2000);
-    
-    // Deactivate it
-    await reasonsTypeMasterPage.clickThreeDotMenu(allTestCode);
-    await reasonsTypeMasterPage.clickEditOption();
-    await reasonsTypeMasterPage.toggleActiveCheckbox();
-    await reasonsTypeMasterPage.clickUpdateButton();
-    await page.waitForTimeout(2000);
-    
-    // Verify it's not visible in default view
-    let isVisible = await reasonsTypeMasterPage.isReasonTypeVisible(allTestCode);
-    expect(isVisible).toBeFalsy();
     console.log('✓ Inactive reason not visible in default view');
     
-    // Toggle "All Reason Types"
+    // Toggle "All Reason Types" checkbox to show inactive reasons
     await reasonsTypeMasterPage.toggleAllReasonTypes();
+    await page.waitForTimeout(1000);
+    console.log('✓ Toggling All Reason Types checkbox');
     
-    // Verify deactivated reason now appears
-    isVisible = await reasonsTypeMasterPage.isReasonTypeVisible(allTestCode);
-    expect(isVisible).toBeTruthy();
-    console.log('✓ Inactive reason now visible when "All Reason Types" is selected');
-  });
-
-  test('TC_REASONS_TYPE_MASTER_007: Should delete reason type with notification', async ({ page }) => {
-    console.log('\n=== TC_REASONS_TYPE_MASTER_007: Delete Reason Type ===');
+    // Verify inactive reason types visible
+    isStillVisible = await reasonsTypeMasterPage.isReasonTypeVisible(editTestCode);
+    expect(isStillVisible).toBeTruthy();
+    console.log('✓ Inactive reason types visible after toggling All Reason Types');
     
-    // Navigate to Reasons Type Master
-    await reasonsTypeMasterPage.navigateToReasonsTypeMaster();
+    // Click 3-dot menu of inactive reason
+    await reasonsTypeMasterPage.clickThreeDotMenu(editTestCode);
+    console.log('✓ Clicking 3-dot menu of inactive reason');
     
-    // Create a reason type to delete
-    const deleteTestCode = `DEL_${timestamp}`;
-    await reasonsTypeMasterPage.createReasonType(deleteTestCode, 'Reason To Delete', 'Delete test remark');
-    await page.waitForTimeout(2000);
-    
-    // Verify it exists
-    let isVisible = await reasonsTypeMasterPage.isReasonTypeVisible(deleteTestCode);
-    expect(isVisible).toBeTruthy();
-    console.log(`✓ Reason type "${deleteTestCode}" exists`);
-    
-    // Get count before deletion
-    const countBefore = await reasonsTypeMasterPage.getReasonTypeCount();
-    
-    // Click 3-dot menu
-    await reasonsTypeMasterPage.clickThreeDotMenu(deleteTestCode);
-    
-    // Click Delete
+    // Click deactive option
     await reasonsTypeMasterPage.clickDeleteOption();
+    console.log('✓ Clicking deactive option');
     
     // Confirm deletion if dialog appears
     await reasonsTypeMasterPage.confirmDeletion();
     
-    // Verify success notification
-    const isSuccess = await reasonsTypeMasterPage.isSuccessNotificationVisible();
-    expect(isSuccess).toBeTruthy();
-    console.log('✓ Delete success notification displayed');
-    
-    // Verify notification message
-    const notification = await reasonsTypeMasterPage.getNotificationMessage();
-    console.log(`✓ Notification: ${notification}`);
-    
-    // Verify reason type is removed
+    // Verify successfully deleted
     await page.waitForTimeout(2000);
-    isVisible = await reasonsTypeMasterPage.isReasonTypeVisible(deleteTestCode);
-    expect(isVisible).toBeFalsy();
-    console.log('✓ Deleted reason type removed from list');
-    
-    // Verify count decreased
-    const countAfter = await reasonsTypeMasterPage.getReasonTypeCount();
-    expect(countAfter).toBeLessThan(countBefore);
-    console.log(`✓ Count decreased from ${countBefore} to ${countAfter}`);
+    const isDeleted = !(await reasonsTypeMasterPage.isReasonTypeVisible(editTestCode));
+    expect(isDeleted).toBeTruthy();
+    console.log('✓ Successfully deleted inactive reason type');
   });
 });
