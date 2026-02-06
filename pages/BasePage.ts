@@ -70,7 +70,7 @@ export class BasePage {
   /**
    * Check if element is visible
    */
-  async isElementVisible(locator: Locator): Promise<boolean> {
+  async isElementVisible(locator: Locator, p0: number): Promise<boolean> {
     return await locator.isVisible();
   }
 
