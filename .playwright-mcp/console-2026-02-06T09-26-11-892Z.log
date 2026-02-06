@@ -1,0 +1,4 @@
+[   20857ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ https://111.119.245.10:20081/api/auth/sign-in:0
+[   20859ms] [ERROR] Error during sign in: {message: Please check Username and Password is correct} @ https://111.119.245.10:20081/assets/index-BZmHdLrz.js:249
+[   20860ms] [ERROR] {message: Please check Username and Password is correct} @ https://111.119.245.10:20081/assets/jwt-sign-up-view-BjdZ9Lsi.js:4
+[   40065ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ https://111.119.245.10:20081/api/getSavedIssueHandoverData?jobCardNo=JC-06022026-0004-0016:0

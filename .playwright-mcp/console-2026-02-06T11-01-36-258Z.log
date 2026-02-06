@@ -1,0 +1,172 @@
+[  217637ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ https://111.119.245.10:20081/api/getSavedIssueHandoverData?jobCardNo=JC-06022026-0004-0016:0
+[  269826ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ https://111.119.245.10:20081/api/getSavedIssueHandoverData?jobCardNo=JC-06022026-0004-0016:0
+[  462489ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ https://111.119.245.10:20081/api/getSavedIssueHandoverData?jobCardNo=JC-06022026-0004-0016:0
+[ 1010048ms] [ERROR] Error saving weapon: Error: License Number is required; IssuedTo is required
+    at https://111.119.245.10:20081/assets/ViewArmoryEquipments-DyBnKKhi.js:1:16047
+    at https://111.119.245.10:20081/assets/ViewArmoryEquipments-DyBnKKhi.js:1:16522
+    at D6 (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:24296)
+    at j0 (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:42451)
+    at ade (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:41273)
+    at mm (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:40312)
+    at wD (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:36913)
+    at Nh (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:39:3288)
+    at https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:34286 @ https://111.119.245.10:20081/assets/ViewArmoryEquipments-DyBnKKhi.js:0
+[ 1010052ms] [ERROR] Error in equipment: Error: Cannot save. Only 1 equipment(s) assigned, but 2 equipment(s) are required for this job card.
+    at https://111.119.245.10:20081/assets/ViewArmoryEquipments-DyBnKKhi.js:1:35041
+    at https://111.119.245.10:20081/assets/ViewArmoryEquipments-DyBnKKhi.js:1:36183
+    at D6 (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:24296)
+    at j0 (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:42451)
+    at ade (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:41273)
+    at mm (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:40312)
+    at wD (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:36913)
+    at Nh (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:39:3288)
+    at https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:34286 @ https://111.119.245.10:20081/assets/ViewArmoryEquipments-DyBnKKhi.js:0
+[ 1010271ms] [ERROR] Error saving weapon: Error: License Number is required; IssuedTo is required
+    at https://111.119.245.10:20081/assets/ViewArmoryEquipments-DyBnKKhi.js:1:16047
+    at https://111.119.245.10:20081/assets/ViewArmoryEquipments-DyBnKKhi.js:1:16522
+    at D6 (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:24296)
+    at j0 (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:42451)
+    at wD (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:36652)
+    at Nh (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:39:3288)
+    at ade (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:41328)
+    at mm (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:40312)
+    at qK (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:35759)
+    at E (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:26:1535) @ https://111.119.245.10:20081/assets/ViewArmoryEquipments-DyBnKKhi.js:0
+[ 1010274ms] [ERROR] Error in equipment: Error: Cannot save. Only 1 equipment(s) assigned, but 2 equipment(s) are required for this job card.
+    at https://111.119.245.10:20081/assets/ViewArmoryEquipments-DyBnKKhi.js:1:35041
+    at https://111.119.245.10:20081/assets/ViewArmoryEquipments-DyBnKKhi.js:1:36183
+    at D6 (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:24296)
+    at j0 (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:42451)
+    at wD (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:36652)
+    at Nh (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:39:3288)
+    at ade (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:41328)
+    at mm (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:40312)
+    at qK (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:35759)
+    at E (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:26:1535) @ https://111.119.245.10:20081/assets/ViewArmoryEquipments-DyBnKKhi.js:0
+[ 1076970ms] [ERROR] Error saving weapon: Error: License Number is required; IssuedTo is required
+    at https://111.119.245.10:20081/assets/ViewArmoryEquipments-DyBnKKhi.js:1:16047
+    at https://111.119.245.10:20081/assets/ViewArmoryEquipments-DyBnKKhi.js:1:16522
+    at D6 (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:24296)
+    at j0 (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:42451)
+    at ade (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:41273)
+    at mm (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:40312)
+    at wD (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:36913)
+    at Nh (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:39:3288)
+    at https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:34286 @ https://111.119.245.10:20081/assets/ViewArmoryEquipments-DyBnKKhi.js:0
+[ 1076996ms] [ERROR] Error in equipment: Error: Cannot save. Only 0 equipment(s) assigned, but 2 equipment(s) are required for this job card.
+    at https://111.119.245.10:20081/assets/ViewArmoryEquipments-DyBnKKhi.js:1:35041
+    at https://111.119.245.10:20081/assets/ViewArmoryEquipments-DyBnKKhi.js:1:36183
+    at D6 (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:24296)
+    at j0 (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:42451)
+    at ade (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:41273)
+    at mm (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:40312)
+    at wD (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:36913)
+    at Nh (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:39:3288)
+    at https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:34286 @ https://111.119.245.10:20081/assets/ViewArmoryEquipments-DyBnKKhi.js:0
+[ 1077199ms] [ERROR] Error saving weapon: Error: License Number is required; IssuedTo is required
+    at https://111.119.245.10:20081/assets/ViewArmoryEquipments-DyBnKKhi.js:1:16047
+    at https://111.119.245.10:20081/assets/ViewArmoryEquipments-DyBnKKhi.js:1:16522
+    at D6 (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:24296)
+    at j0 (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:42451)
+    at wD (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:36652)
+    at Nh (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:39:3288)
+    at ade (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:41328)
+    at mm (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:40312)
+    at qK (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:35759)
+    at E (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:26:1535) @ https://111.119.245.10:20081/assets/ViewArmoryEquipments-DyBnKKhi.js:0
+[ 1077203ms] [ERROR] Error in equipment: Error: Cannot save. Only 0 equipment(s) assigned, but 2 equipment(s) are required for this job card.
+    at https://111.119.245.10:20081/assets/ViewArmoryEquipments-DyBnKKhi.js:1:35041
+    at https://111.119.245.10:20081/assets/ViewArmoryEquipments-DyBnKKhi.js:1:36183
+    at D6 (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:24296)
+    at j0 (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:42451)
+    at wD (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:36652)
+    at Nh (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:39:3288)
+    at ade (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:41328)
+    at mm (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:40312)
+    at qK (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:35759)
+    at E (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:26:1535) @ https://111.119.245.10:20081/assets/ViewArmoryEquipments-DyBnKKhi.js:0
+[ 1146475ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ https://111.119.245.10:20081/api/getSavedIssueHandoverData?jobCardNo=JC-06022026-0004-0016:0
+[ 1160579ms] [ERROR] Error saving weapon: Error: Cannot save. At least one weapon is required for this job card.
+    at https://111.119.245.10:20081/assets/ViewArmoryEquipments-DyBnKKhi.js:1:15185
+    at https://111.119.245.10:20081/assets/ViewArmoryEquipments-DyBnKKhi.js:1:16522
+    at D6 (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:24296)
+    at j0 (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:42451)
+    at ade (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:41273)
+    at mm (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:40312)
+    at wD (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:36913)
+    at Nh (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:39:3288)
+    at https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:34286 @ https://111.119.245.10:20081/assets/ViewArmoryEquipments-DyBnKKhi.js:0
+[ 1160585ms] [ERROR] Error in equipment: Error: Cannot save. Only 0 equipment(s) assigned, but 2 equipment(s) are required for this job card.
+    at https://111.119.245.10:20081/assets/ViewArmoryEquipments-DyBnKKhi.js:1:35041
+    at https://111.119.245.10:20081/assets/ViewArmoryEquipments-DyBnKKhi.js:1:36183
+    at D6 (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:24296)
+    at j0 (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:42451)
+    at ade (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:41273)
+    at mm (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:40312)
+    at wD (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:36913)
+    at Nh (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:39:3288)
+    at https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:34286 @ https://111.119.245.10:20081/assets/ViewArmoryEquipments-DyBnKKhi.js:0
+[ 1160711ms] [ERROR] Error saving weapon: Error: Cannot save. At least one weapon is required for this job card.
+    at https://111.119.245.10:20081/assets/ViewArmoryEquipments-DyBnKKhi.js:1:15185
+    at https://111.119.245.10:20081/assets/ViewArmoryEquipments-DyBnKKhi.js:1:16522
+    at D6 (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:24296)
+    at j0 (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:42451)
+    at wD (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:36652)
+    at Nh (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:39:3288)
+    at ade (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:41328)
+    at mm (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:40312)
+    at qK (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:35759)
+    at E (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:26:1535) @ https://111.119.245.10:20081/assets/ViewArmoryEquipments-DyBnKKhi.js:0
+[ 1160714ms] [ERROR] Error in equipment: Error: Cannot save. Only 0 equipment(s) assigned, but 2 equipment(s) are required for this job card.
+    at https://111.119.245.10:20081/assets/ViewArmoryEquipments-DyBnKKhi.js:1:35041
+    at https://111.119.245.10:20081/assets/ViewArmoryEquipments-DyBnKKhi.js:1:36183
+    at D6 (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:24296)
+    at j0 (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:42451)
+    at wD (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:36652)
+    at Nh (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:39:3288)
+    at ade (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:41328)
+    at mm (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:40312)
+    at qK (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:35759)
+    at E (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:26:1535) @ https://111.119.245.10:20081/assets/ViewArmoryEquipments-DyBnKKhi.js:0
+[ 1163478ms] [ERROR] Error saving weapon: Error: Cannot save. At least one weapon is required for this job card.
+    at https://111.119.245.10:20081/assets/ViewArmoryEquipments-DyBnKKhi.js:1:15185
+    at https://111.119.245.10:20081/assets/ViewArmoryEquipments-DyBnKKhi.js:1:16522
+    at D6 (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:24296)
+    at j0 (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:42451)
+    at ade (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:41273)
+    at mm (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:40312)
+    at wD (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:36913)
+    at Nh (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:39:3288)
+    at https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:34286 @ https://111.119.245.10:20081/assets/ViewArmoryEquipments-DyBnKKhi.js:0
+[ 1163481ms] [ERROR] Error in equipment: Error: Cannot save. Only 0 equipment(s) assigned, but 2 equipment(s) are required for this job card.
+    at https://111.119.245.10:20081/assets/ViewArmoryEquipments-DyBnKKhi.js:1:35041
+    at https://111.119.245.10:20081/assets/ViewArmoryEquipments-DyBnKKhi.js:1:36183
+    at D6 (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:24296)
+    at j0 (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:42451)
+    at ade (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:41273)
+    at mm (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:40312)
+    at wD (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:36913)
+    at Nh (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:39:3288)
+    at https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:34286 @ https://111.119.245.10:20081/assets/ViewArmoryEquipments-DyBnKKhi.js:0
+[ 1163605ms] [ERROR] Error saving weapon: Error: Cannot save. At least one weapon is required for this job card.
+    at https://111.119.245.10:20081/assets/ViewArmoryEquipments-DyBnKKhi.js:1:15185
+    at https://111.119.245.10:20081/assets/ViewArmoryEquipments-DyBnKKhi.js:1:16522
+    at D6 (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:24296)
+    at j0 (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:42451)
+    at wD (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:36652)
+    at Nh (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:39:3288)
+    at ade (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:41328)
+    at mm (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:40312)
+    at qK (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:35759)
+    at E (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:26:1535) @ https://111.119.245.10:20081/assets/ViewArmoryEquipments-DyBnKKhi.js:0
+[ 1163608ms] [ERROR] Error in equipment: Error: Cannot save. Only 0 equipment(s) assigned, but 2 equipment(s) are required for this job card.
+    at https://111.119.245.10:20081/assets/ViewArmoryEquipments-DyBnKKhi.js:1:35041
+    at https://111.119.245.10:20081/assets/ViewArmoryEquipments-DyBnKKhi.js:1:36183
+    at D6 (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:24296)
+    at j0 (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:42451)
+    at wD (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:36652)
+    at Nh (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:39:3288)
+    at ade (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:41328)
+    at mm (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:40312)
+    at qK (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:41:35759)
+    at E (https://111.119.245.10:20081/assets/index-BZmHdLrz.js:26:1535) @ https://111.119.245.10:20081/assets/ViewArmoryEquipments-DyBnKKhi.js:0
