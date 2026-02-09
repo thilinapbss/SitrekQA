@@ -1,31 +1,40 @@
 {
-  "name": "playwright-typescript-automation",
+  "name": "sitrek-test-automation",
   "version": "1.0.0",
-  "description": "Playwright automation project using TypeScript with Page Object Model",
+  "description": "Sitrek Test Automation - Smoke Test Suite using Playwright & TypeScript",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "playwright test",
+    "test": "node scripts/sitrekTestExecutor.js",
+    "setup": "node scripts/quickSetup.js",
+    "setup-pw": "node scripts/setupPlaywright.js",
+    "extract-tests": "node scripts/extract_test_cases.js",
+    "api-test": "node scripts/apiTestExecutor.js",
     "test:headed": "playwright test --headed",
     "test:debug": "playwright test --debug",
     "test:ui": "playwright test --ui",
     "test:chromium": "playwright test --project=chromium",
-    "test:firefox": "playwright test --project=firefox",
-    "test:webkit": "playwright test --project=webkit",
     "report": "playwright show-report",
-    "codegen": "playwright codegen"
+    "codegen": "playwright codegen",
+    "check": "node scripts/checkPlaywright.js"
   },
   "keywords": [
     "playwright",
     "typescript",
     "automation",
     "testing",
-    "page-object-model"
+    "sitrek",
+    "qa"
   ],
-  "author": "",
+  "author": "Sitrek QA Team",
   "license": "ISC",
   "devDependencies": {
     "@playwright/test": "^1.58.1",
     "@types/node": "^20.11.0",
-    "typescript": "^5.3.0"
+    "typescript": "^5.3.0",
+    "dotenv": "^16.3.1"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1"
   }
 }

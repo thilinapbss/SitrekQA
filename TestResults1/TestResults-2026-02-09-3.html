@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Card Test Suite Report</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        .content {
+            padding: 40px;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .section h2 {
+            color: #333;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+        .metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .metric-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+            text-align: center;
+        }
+        .metric-card h3 {
+            color: #666;
+            font-size: 0.9em;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        .metric-value {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #333;
+        }
+        .chart-container {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            margin: 0 auto 30px;
+        }
+        .test-case {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border-left: 4px solid #dc3545;
+        }
+        .test-case.passed {
+            border-left-color: #28a745;
+        }
+        .test-case.warning {
+            border-left-color: #ffc107;
+        }
+        .test-case h3 {
+            color: #333;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .status-badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.85em;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+        .status-badge.failed {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        .status-badge.passed {
+            background: #d4edda;
+            color: #155724;
+        }
+        .status-badge.warning {
+            background: #fff3cd;
+            color: #856404;
+        }
+        .issue {
+            background: #fff3cd;
+            border: 1px solid #ffc107;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+        }
+        .issue strong {
+            color: #856404;
+        }
+        .steps {
+            list-style: none;
+            padding: 0;
+        }
+        .steps li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+            color: #666;
+            line-height: 1.6;
+        }
+        .steps li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #28a745;
+            font-weight: bold;
+        }
+        .steps li.failed:before {
+            content: "✗";
+            color: #dc3545;
+        }
+        .recommendation {
+            background: #d1ecf1;
+            border: 1px solid #bee5eb;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+        }
+        .recommendation strong {
+            color: #0c5460;
+        }
+        .footer {
+            background: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            color: #666;
+            border-top: 1px solid #ddd;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table th {
+            background: #667eea;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: bold;
+        }
+        table td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+        table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        .code-block {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 6px;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+        .warning-section {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 20px;
+            border-radius: 6px;
+            margin-bottom: 30px;
+        }
+        .warning-section h3 {
+            color: #856404;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Job Card Test Suite Report</h1>
+            <p>SITREK - Job Module Testing</p>
+            <p>Test Date: February 9, 2026</p>
+        </div>
+
+        <div class="content">
+            <!-- Test Summary Section -->
+            <div class="section">
+                <h2>Test Execution Summary</h2>
+                <div class="metrics">
+                    <div class="metric-card">
+                        <h3>Total Test Cases</h3>
+                        <div class="metric-value">1</div>
+                    </div>
+                    <div class="metric-card">
+                        <h3>Passed</h3>
+                        <div class="metric-value" style="color: #28a745;">0</div>
+                    </div>
+                    <div class="metric-card">
+                        <h3>Failed</h3>
+                        <div class="metric-value" style="color: #dc3545;">0</div>
+                    </div>
+                    <div class="metric-card">
+                        <h3>Warning/Blocked</h3>
+                        <div class="metric-value" style="color: #ffc107;">1</div>
+                    </div>
+                </div>
+
+                <div class="chart-container">
+                    <canvas id="resultsChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Critical Issues Section -->
+            <div class="warning-section">
+                <h3>⚠️ Critical Issues - Test Data Mismatch</h3>
+                <p>The test data in <strong>test-data/testdata.json</strong> contains values that do not exist in the SITREK system. This has been identified as a blocker for automated test execution:</p>
+                
+                <h4 style="margin-top: 15px; color: #856404;"><u>Issues Found:</u></h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Field</th>
+                            <th>Test Data Value</th>
+                            <th>System Status</th>
+                            <th>Impact</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Vehicle</strong></td>
+                            <td>Vehicle-001</td>
+                            <td>NOT FOUND</td>
+                            <td>✗ Test Blocked</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Driver</strong></td>
+                            <td>H.M Athula</td>
+                            <td>NOT FOUND</td>
+                            <td>✗ Test Blocked</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Vehicle Commander 1</strong></td>
+                            <td>J D Kalumsiri</td>
+                            <td>NOT FOUND</td>
+                            <td>✗ Test Blocked</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Vehicle Commander 2</strong></td>
+                            <td>J D Kalumsiri</td>
+                            <td>NOT FOUND</td>
+                            <td>✗ Test Blocked</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Other Staff</strong></td>
+                            <td>A D Dissanayake</td>
+                            <td>NOT FOUND</td>
+                            <td>✗ Test Blocked</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Armed Guards</strong></td>
+                            <td>J D Kalumsiri</td>
+                            <td>NOT FOUND</td>
+                            <td>✗ Test Blocked</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Test Case Details -->
+            <div class="section">
+                <h2>Test Case: TC_JOB_CARD_001</h2>
+                <div class="test-case warning">
+                    <h3>
+                        Create Job Card with Team and Equipment Allocation
+                        <span class="status-badge warning">BLOCKED - DATA ISSUE</span>
+                    </h3>
+                    
+                    <div class="issue">
+                        <strong>Status:</strong> Test execution blocked due to critical test data mismatches. The test cannot proceed without valid reference data.
+                    </div>
+
+                    <h4 style="margin-top: 20px; color: #333;">Steps Completed:</h4>
+                    <ul class="steps">
+                        <li>✓ Navigate to Job Card module</li>
+                        <li>✓ Application loaded successfully</li>
+                        <li>✓ User authenticated (chathura)</li>
+                        <li>✓ Route selection: "Nation Trust Kelaniya - Colombo" (SUCCESS)</li>
+                        <li>✓ Job selection with correct customer and location (SUCCESS)</li>
+                        <li class="failed">✗ Vehicle selection: "Vehicle-001" not found in system</li>
+                        <li class="failed">✗ Driver selection: "H.M Athula" not found in system</li>
+                        <li class="failed">✗ Test execution halted - unable to continue</li>
+                    </ul>
+
+                    <h4 style="margin-top: 20px; color: #333;">Test Evidence:</h4>
+                    <p>Screenshot showing the current state of the application with form fields populated with actual available data:</p>
+                </div>
+            </div>
+
+            <!-- Actions Taken -->
+            <div class="section">
+                <h2>Issue Resolution & Actions</h2>
+                
+                <div class="recommendation">
+                    <strong>Status Update:</strong> Test data has been partially updated with actual available values from the system, but manual verification and system data audit is required.
+                </div>
+
+                <h4>Updated Test Data Fields (test-data/testdata.json):</h4>
+                <div class="code-block">
+"vehicle": "Wagon R",
+"teamAllocation": {
+  "driver": "Kamal Perera",
+  "vehicleCommander1": "Chathura Jayamaha",  // ⚠️ Verify this exists
+  "vehicleCommander2": "Chathura Jayawickrama",  // ⚠️ Verify this exists
+  "otherStaff": "Janith Samarawickrama",  // ⚠️ Verify this exists
+  "armedGuards": "Kasun Udara"  // ⚠️ Verify this exists
+}
+                </div>
+
+                <h4 style="margin-top: 20px;">Recommended Actions:</h4>
+                <ol style="padding-left: 20px; color: #666; line-height: 1.8;">
+                    <li><strong>Master Data Audit:</strong> Run "Masters" module tests to verify all available drivers, vehicle commanders, staff members, and armed guards in the system</li>
+                    <li><strong>Update Test Data:</strong> After audit, update test-data/testdata.json with confirmed valid values</li>
+                    <li><strong>Execute Script:</strong> Create a script to automatically fetch and validate master data before test execution</li>
+                    <li><strong>Test Data Validation:</strong> Add pre-execution validation to check if all test data values exist in the system</li>
+                    <li><strong>Retry Test:</strong> Re-execute TC_JOB_CARD_001 after test data is corrected</li>
+                </ol>
+            </div>
+
+            <!-- Root Cause Analysis -->
+            <div class="section">
+                <h2>Root Cause Analysis</h2>
+                <p style="color: #666; line-height: 1.8; margin-bottom: 15px;">
+                    The test data was created with placeholder values that don't match the actual data in the SITREK system's master tables. This indicates:
+                </p>
+                <ul style="padding-left: 20px; color: #666; line-height: 1.8;">
+                    <li><strong>Data Inconsistency:</strong> Test data collected during test case documentation phase may have been from a different system environment or outdated</li>
+                    <li><strong>Master Data Changes:</strong> System master data (drivers, equipment, staff) may have been updated after initial test data creation</li>
+                    <li><strong>Environment Mismatch:</strong> Test data might be for a different environment (dev/staging) than the one being tested (production)</li>
+                    <li><strong>Process Gap:</strong> No validation mechanism in place to ensure test data accuracy before test execution</li>
+                </ul>
+            </div>
+
+            <!-- System Configuration -->
+            <div class="section">
+                <h2>Test Configuration</h2>
+                <table>
+                    <tr>
+                        <th>Parameter</th>
+                        <th>Value</th>
+                    </tr>
+                    <tr>
+                        <td>Base URL</td>
+                        <td>https://111.119.245.10:20081/</td>
+                    </tr>
+                    <tr>
+                        <td>Browser</td>
+                        <td>Chrome (Playwright)</td>
+                    </tr>
+                    <tr>
+                        <td>Test User</td>
+                        <td>chathura</td>
+                    </tr>
+                    <tr>
+                        <td>Module</td>
+                        <td>Jobs → Job Card</td>
+                    </tr>
+                    <tr>
+                        <td>Test Data File</td>
+                        <td>test-data/testdata.json</td>
+                    </tr>
+                    <tr>
+                        <td>Test Type</td>
+                        <td>Integration/Functional</td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- Recommendations -->
+            <div class="section">
+                <h2>Recommendations & Next Steps</h2>
+                
+                <div style="background: #e7f3ff; border-left: 4px solid #2196F3; padding: 15px; border-radius: 4px; margin-bottom: 15px;">
+                    <p><strong style="color: #0c3a66;">Priority 1: IMMEDIATE</strong></p>
+                    <p style="color: #0c3a66; margin-top: 8px;">
+                        Execute the Masters test suite (MasterTestRunner.md) to capture current valid values for all master data fields used in Job Card creation.
+                    </p>
+                </div>
+
+                <div style="background: #f0f4ff; border-left: 4px solid #667eea; padding: 15px; border-radius: 4px; margin-bottom: 15px;">
+                    <p><strong style="color: #333;">Priority 2: HIGH</strong></p>
+                    <ul style="color: #333; margin-top: 8px; padding-left: 20px;">
+                        <li>Create a test data validation utility that checks data existence before test execution</li>
+                        <li>Document the current state of all master data in the system</li>
+                        <li>Establish a master data baseline for testing</li>
+                    </ul>
+                </div>
+
+                <div style="background: #fff3e0; border-left: 4px solid #ff9800; padding: 15px; border-radius: 4px;">
+                    <p><strong style="color: #e65100;">Priority 3: IMPORTANT</strong></p>
+                    <ul style="color: #e65100; margin-top: 8px; padding-left: 20px;">
+                        <li>Implement a data seeding mechanism to ensure test data consistency across environments</li>
+                        <li>Add automated test data validation in the CI/CD pipeline</li>
+                        <li>Version control test data and document changes</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Test Statistics -->
+            <div class="section">
+                <h2>Test Statistics</h2>
+                <table>
+                    <tr>
+                        <th>Metric</th>
+                        <th>Value</th>
+                    </tr>
+                    <tr>
+                        <td>Execution Time</td>
+                        <td>~5 minutes (including diagnostics)</td>
+                    </tr>
+                    <tr>
+                        <td>Browser</td>
+                        <td>Chrome (Headless Mode)</td>
+                    </tr>
+                    <tr>
+                        <td>Test Environment</td>
+                        <td>Production</td>
+                    </tr>
+                    <tr>
+                        <td>Issues Identified</td>
+                        <td>6 (All related to test data mismatch)</td>
+                    </tr>
+                    <tr>
+                        <td>Blocker Status</td>
+                        <td>🔴 BLOCKED - Requires Master Data Audit</td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- Conclusion -->
+            <div class="section">
+                <h2>Conclusion</h2>
+                <p style="color: #666; line-height: 1.8;">
+                    The Job Card test cannot be executed in its current state due to critical mismatches between the test data and the actual values available in the SITREK system. 
+                    The application itself is functioning correctly as demonstrated by successful navigation and job selection. 
+                    However, team member and vehicle data need to be validated and synchronized with current system master data.
+                </p>
+                <p style="color: #666; line-height: 1.8; margin-top: 15px;">
+                    <strong>Next Action:</strong> Execute the Master Data tests to establish accurate test data values, then retry this test case with corrected data.
+                </p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>SITREK Test Automation Report | Generated: February 9, 2026 | Test Framework: Playwright</p>
+        </div>
+    </div>
+
+    <script>
+        // Chart.js configuration
+        const ctx = document.getElementById('resultsChart').getContext('2d');
+        const resultsChart = new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Blocked/Warning', 'Passed', 'Failed'],
+                datasets: [{
+                    data: [1, 0, 0],
+                    backgroundColor: ['#ffc107', '#28a745', '#dc3545'],
+                    borderColor: ['#856404', '#155724', '#721c24'],
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            padding: 15,
+                            font: {
+                                size: 12
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

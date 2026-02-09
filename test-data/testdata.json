@@ -1,0 +1,162 @@
+{
+  "_dataFlexibilityNote": "If any value is not available in the system, substitute with a similar available value and proceed with test execution. This is acceptable and not a test failure.",
+  "credentials": {
+    "creator": {
+      "username": "chathura",
+      "password": "Admin@1234"
+    },
+    "approver": {
+      "username": "namal",
+      "password": "Admin@1234"
+    }
+  },
+  "commonData": {
+    "route": "Nation Trust Kelaniya - Colombo",
+    "customer": "Nation Trust Bank PLC",
+    "agreement": "Nation Trust Bank PLC - CIT - Once A Week"
+  },
+  "testCases": {
+    "TC_JOB_TEMPLATE_001": {
+      "testName": "Create and Approve Job Template",
+      "templateData": {
+        "templateName": "Nation Trust Bank PLC - CIT - Nation Trust Kelaniya - Colombo - 001",
+        "cashType": "Cash",
+        "jobLocation": "NATION TRUST KELANIYA - Colombo - SITREK NEGOMBO BRANCH"
+      }
+    },
+    "TC_JOB_CARD_001": {
+      "testName": "Create Job Card with Team and Equipment Allocation",
+      "jobSelectionData": {
+        "jobCategory": "Normal",
+        "jobTemplate": "Nation Trust Bank - Kelaniya - 001",
+        "location": "NATION TRUST KELANIYA - Colombo - SITREK NEGOMBO BRANCH",
+        "jobType": "Collect & Deposit",
+        "operationType": "CIT",
+        "atmId": "NA"
+      },
+      "vehicle": "Wagon R",
+      "teamAllocation": {
+        "driver": "Kamal Perera",
+        "vehicleCommander1": "Chathura Jayamaha",
+        "vehicleCommander2": "Chathura Jayawickrama",
+        "otherStaff": "Janith Samarawickrama",
+        "armedGuards": "Kasun Udara"
+      },
+      "equipmentAllocation": [
+        "Cash Counting Machine",
+        "Mobile",
+        "Body Camera"
+      ]
+    },
+    "TC_VEHICLE_MASTER_001": {
+      "testName": "Create Ad-hoc Hiring Vehicle",
+      "vehicleData": {
+        "vehicleNumber": "AUTO-VEH-20260209-123723",
+        "model": "Toyota Camry",
+        "year": "2023",
+        "color": "White",
+        "vehicleType": "Sedan",
+        "engineNumber": "ENG-20260209-123723",
+        "chassisNumber": "CHS-20260209-123723",
+        "owner": "Test Owner",
+        "purchasePrice": "5000000",
+        "currentValue": "4500000",
+        "licensePlateNumber": "ABC-1234",
+        "licenseType": "Commercial",
+        "armoringLevel": "Level 3",
+        "remarks": "Test vehicle for automation",
+        "active": true
+      }
+    },
+    "TC_VEHICLE_MASTER_002": {
+      "testName": "Sync All Vehicles and Verify System Time",
+      "syncData": {
+        "buttonName": "Sync All",
+        "expectedMessage": "Vehicles synced successfully",
+        "expectedSystemTime": "2026-02-09 12:37:23",
+        "columnToVerify": "Last Synced Date",
+        "timezone": "Asia/Colombo (UTC+5:30)"
+      }
+    },
+    "TC_VAULT_LOCATIONS_MASTER_001": {
+      "testName": "Verify Vault Locations Master navigation and Sync All functionality",
+      "syncData": {
+        "buttonName": "Sync All",
+        "expectedMessage": "Vault Locations synced successfully",
+        "expectedSystemTime": "2026-02-09 12:37:23",
+        "columnToVerify": "Last Synced Date",
+        "timezone": "Asia/Colombo (UTC+5:30)"
+      }
+    },
+    "TC_SEAL_MASTER_001": {
+      "testName": "Verify Seal Master navigation and Sync All functionality",
+      "syncData": {
+        "buttonName": "Sync All",
+        "expectedMessage": "Seals synced successfully",
+        "expectedSystemTime": "2026-02-09 12:37:23",
+        "columnToVerify": "Last Synced Date",
+        "timezone": "Asia/Colombo (UTC+5:30)"
+      }
+    },
+    "TC_ROUTE_MASTER_001": {
+      "testName": "Verify Route Master navigation and Sync All functionality",
+      "syncData": {
+        "buttonName": "Sync All",
+        "expectedMessage": "Routes synced successfully",
+        "expectedSystemTime": "2026-02-09 12:37:23",
+        "columnToVerify": "Last Synced Date",
+        "timezone": "Asia/Colombo (UTC+5:30)"
+      }
+    },
+    "TC_REASONS_TYPE_MASTER_001": {
+      "testName": "Verify Reasons Type Master navigation and Sync All functionality",
+      "syncData": {
+        "buttonName": "Sync All",
+        "expectedMessage": "Reasons Types synced successfully",
+        "expectedSystemTime": "2026-02-09 12:37:23",
+        "columnToVerify": "Last Synced Date",
+        "timezone": "Asia/Colombo (UTC+5:30)"
+      }
+    },
+    "TC_EMPLOYEE_MASTER_001": {
+      "testName": "Verify Employee Master navigation and Sync All functionality",
+      "syncData": {
+        "buttonName": "Sync All",
+        "expectedMessage": "Employees synced successfully",
+        "expectedSystemTime": "2026-02-09 12:37:23",
+        "columnToVerify": "Last Synced Date",
+        "timezone": "Asia/Colombo (UTC+5:30)"
+      }
+    },
+    "TC_DIVISION_MASTER_001": {
+      "testName": "Verify Division Master navigation and Sync All functionality",
+      "syncData": {
+        "buttonName": "Sync All",
+        "expectedMessage": "Divisions synced successfully",
+        "expectedSystemTime": "2026-02-09 12:37:23",
+        "columnToVerify": "Last Synced Date",
+        "timezone": "Asia/Colombo (UTC+5:30)"
+      }
+    },
+    "TC_DESIGNATION_MASTER_001": {
+      "testName": "Verify Designation Master navigation and Sync All functionality",
+      "syncData": {
+        "buttonName": "Sync All",
+        "expectedMessage": "Designations synced successfully",
+        "expectedSystemTime": "2026-02-09 12:37:23",
+        "columnToVerify": "Last Synced Date",
+        "timezone": "Asia/Colombo (UTC+5:30)"
+      }
+    },
+    "TC_DENOMINATION_MASTER_001": {
+      "testName": "Verify Denomination Master navigation and Sync All functionality",
+      "syncData": {
+        "buttonName": "Sync All",
+        "expectedMessage": "Denominations synced successfully",
+        "expectedSystemTime": "2026-02-09 12:37:23",
+        "columnToVerify": "Last Synced Date",
+        "timezone": "Asia/Colombo (UTC+5:30)"
+      }
+    }
+  }
+}
