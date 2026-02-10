@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sitrek Smoke Test Report - 2026-02-09 - 11</title>
+  <style>
+    :root {
+      --bg: #0b1020;
+      --card: #141b34;
+      --text: #e8ecf8;
+      --muted: #a8b0c8;
+      --pass: #22c55e;
+      --fail: #ef4444;
+      --blocked: #f59e0b;
+      --border: #253059;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+      background: linear-gradient(180deg, #0b1020 0%, #0f1630 100%);
+      color: var(--text);
+    }
+    .container { max-width: 1200px; margin: 24px auto 64px; padding: 0 20px; }
+    .header {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 16px;
+      align-items: center;
+      background: var(--card);
+      padding: 20px 24px;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    }
+    .title h1 { margin: 0 0 6px; font-size: 22px; }
+    .title p { margin: 0; color: var(--muted); font-size: 13px; }
+    .badge { padding: 6px 10px; border-radius: 999px; font-weight: 600; font-size: 12px; }
+    .badge.pass { background: rgba(34,197,94,0.15); color: var(--pass); border: 1px solid rgba(34,197,94,0.4); }
+    .badge.fail { background: rgba(239,68,68,0.15); color: var(--fail); border: 1px solid rgba(239,68,68,0.4); }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 16px;
+      margin-top: 18px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 16px;
+    }
+    .card h2 { margin: 0 0 10px; font-size: 16px; }
+    .muted { color: var(--muted); }
+    .summary { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    .summary .stat {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px;
+    }
+    .stat .label { font-size: 12px; color: var(--muted); }
+    .stat .value { font-size: 20px; font-weight: 700; margin-top: 6px; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    th, td {
+      padding: 10px 8px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+    th { text-align: left; color: var(--muted); font-weight: 600; }
+    .status { font-weight: 700; }
+    .status.pass { color: var(--pass); }
+    .status.fail { color: var(--fail); }
+    .status.blocked { color: var(--blocked); }
+    .pill { display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 11px; border: 1px solid transparent; }
+    .pill.pass { color: var(--pass); border-color: rgba(34,197,94,0.5); background: rgba(34,197,94,0.1); }
+    .pill.fail { color: var(--fail); border-color: rgba(239,68,68,0.5); background: rgba(239,68,68,0.1); }
+    .pill.blocked { color: var(--blocked); border-color: rgba(245,158,11,0.5); background: rgba(245,158,11,0.1); }
+    .screenshots {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 14px;
+    }
+    .shot img { width: 100%; border-radius: 10px; border: 1px solid var(--border); }
+    .shot .caption { font-size: 12px; color: var(--muted); margin-top: 6px; }
+    .legend { display: flex; gap: 12px; flex-wrap: wrap; font-size: 12px; color: var(--muted); }
+    .legend span { display: inline-flex; align-items: center; gap: 6px; }
+    .dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+    .dot.pass { background: var(--pass); }
+    .dot.fail { background: var(--fail); }
+    .dot.blocked { background: var(--blocked); }
+    .pie-wrap { display: flex; align-items: center; gap: 20px; }
+    .pie svg { width: 140px; height: 140px; }
+    .notes ul { margin: 8px 0 0 18px; color: var(--muted); }
+    .footer { margin-top: 24px; font-size: 12px; color: var(--muted); text-align: center; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="title">
+        <h1>Sitrek Smoke Test Report</h1>
+        <p>Execution Date: 2026-02-09 • Sequence: 11 • Browser: Chrome (headed) • Base URL: https://sitrektest.ddns.net:20081/</p>
+      </div>
+      <div>
+        <span class="badge fail">Completed with Failures</span>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="card" style="grid-column: span 7;">
+        <h2>Execution Summary</h2>
+        <div class="summary">
+          <div class="stat">
+            <div class="label">Total</div>
+            <div class="value">20</div>
+          </div>
+          <div class="stat">
+            <div class="label">Passed</div>
+            <div class="value" style="color: var(--pass);">13</div>
+          </div>
+          <div class="stat">
+            <div class="label">Failed / Blocked</div>
+            <div class="value" style="color: var(--fail);">7</div>
+          </div>
+        </div>
+      </div>
+      <div class="card" style="grid-column: span 5;">
+        <h2>Result Distribution</h2>
+        <div class="pie-wrap">
+          <div class="pie">
+            <svg viewBox="0 0 36 36" aria-label="Pie chart">
+              <circle cx="18" cy="18" r="15.915" fill="none" stroke="#1f2a4a" stroke-width="3.5" />
+              <circle cx="18" cy="18" r="15.915" fill="none" stroke="var(--pass)" stroke-width="3.5" stroke-dasharray="65 35" stroke-dashoffset="0" />
+              <circle cx="18" cy="18" r="15.915" fill="none" stroke="var(--fail)" stroke-width="3.5" stroke-dasharray="30 70" stroke-dashoffset="-65" />
+              <circle cx="18" cy="18" r="15.915" fill="none" stroke="var(--blocked)" stroke-width="3.5" stroke-dasharray="5 95" stroke-dashoffset="-95" />
+            </svg>
+          </div>
+          <div class="legend">
+            <span><i class="dot pass"></i>Passed 65%</span>
+            <span><i class="dot fail"></i>Failed 30%</span>
+            <span><i class="dot blocked"></i>Blocked 5%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top: 16px;">
+      <h2>Test Case Results</h2>
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 14%;">Module</th>
+            <th style="width: 36%;">Test Case</th>
+            <th style="width: 12%;">Status</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Login</td><td>Login to system</td><td class="status pass">PASS</td><td>Valid login succeeded; negative cases covered earlier.</td></tr>
+          <tr><td>Masters</td><td>Route Master</td><td class="status pass">PASS</td><td>Sync All completed.</td></tr>
+          <tr><td>Masters</td><td>Division Master</td><td class="status pass">PASS</td><td>Sync All completed.</td></tr>
+          <tr><td>Masters</td><td>Branch Master</td><td class="status pass">PASS</td><td>Sync All completed.</td></tr>
+          <tr><td>Masters</td><td>Vehicle Master</td><td class="status pass">PASS</td><td>Sync All completed; vehicle create had no visible confirmation.</td></tr>
+          <tr><td>Masters</td><td>Agreement Master</td><td class="status pass">PASS</td><td>Sync All completed.</td></tr>
+          <tr><td>Masters</td><td>ATM Cities Master</td><td class="status fail">FAIL</td><td>Last Synced Date does not match system time (system: 2026-02-09 22:14:10 +0530; grid: 2026-02-09 16:01:06).</td></tr>
+          <tr><td>Masters</td><td>Cities Master</td><td class="status pass">PASS</td><td>Sync All completed.</td></tr>
+          <tr><td>Masters</td><td>Collection Type Master</td><td class="status fail">FAIL</td><td>Duplicate code was accepted; expected validation message not shown.</td></tr>
+          <tr><td>Masters</td><td>Denomination Master</td><td class="status fail">FAIL</td><td>Expected Sync All button not present on page.</td></tr>
+          <tr><td>Masters</td><td>Designation Master</td><td class="status pass">PASS</td><td>Sync All completed.</td></tr>
+          <tr><td>Masters</td><td>Employee Master</td><td class="status pass">PASS</td><td>Sync All completed.</td></tr>
+          <tr><td>Masters</td><td>Equipment Master</td><td class="status pass">PASS</td><td>Created “Test Equipment Alpha” successfully.</td></tr>
+          <tr><td>Masters</td><td>Equipment Type Master</td><td class="status fail">FAIL</td><td>Create failed twice with “Error Saving Equipment Type”.</td></tr>
+          <tr><td>Masters</td><td>Reasons Type Master</td><td class="status fail">FAIL</td><td>Deactivate flow completed; could not verify deactivated record in “All Reason Types”.</td></tr>
+          <tr><td>Masters</td><td>Seal Master</td><td class="status pass">PASS</td><td>Sync All completed.</td></tr>
+          <tr><td>Masters</td><td>Vault Locations Master</td><td class="status blocked">BLOCKED</td><td>Navigation blocked in sidebar; unable to open page.</td></tr>
+          <tr><td>Masters</td><td>Weapon Master</td><td class="status pass">PASS</td><td>Sync All completed.</td></tr>
+          <tr><td>Jobs</td><td>Job Template</td><td class="status pass">PASS</td><td>Created and approved successfully.</td></tr>
+          <tr><td>Jobs</td><td>Job Card</td><td class="status fail">FAIL</td><td>PDF generated; after Save, status remained “Pending” instead of “Ongoing”.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="grid">
+      <div class="card" style="grid-column: span 6;">
+        <h2>Data Substitutions</h2>
+        <div class="notes">
+          <ul>
+            <li>Driver substituted with “Charuka Perera”.</li>
+            <li>Vehicle Commander 1 substituted with “K V Weerasinghe”.</li>
+            <li>Vehicle Commander 2 substituted with “K V Samarasinghe”.</li>
+            <li>Armed Guard substituted with “Charuka Perera (Watcher Permit Number :N0099221121212)”.</li>
+            <li>Other Staff substituted with “Janith Samarawickrama”.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card" style="grid-column: span 6;">
+        <h2>Observations</h2>
+        <div class="notes">
+          <ul>
+            <li>Job Card Save completed but resulted in “Pending” status (expected “Ongoing”).</li>
+            <li>Equipment Type create API returned error on two attempts.</li>
+            <li>Collection Type duplicate validation missing.</li>
+            <li>Denomination Master missing expected Sync All control.</li>
+            <li>ATM Cities Master timestamps do not match system time.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top: 16px;">
+      <h2>Failure Screenshots</h2>
+      <div class="screenshots">
+        <div class="shot">
+          <img src="collection_type_duplicate_allowed.png" alt="Collection Type duplicate allowed" />
+          <div class="caption">Collection Type: Duplicate code accepted (expected validation).</div>
+        </div>
+        <div class="shot">
+          <img src="denomination_no_sync_all.png" alt="Denomination missing Sync All" />
+          <div class="caption">Denomination Master: Sync All button not visible.</div>
+        </div>
+        <div class="shot">
+          <img src="equipment_type_save_error.png" alt="Equipment Type save error" />
+          <div class="caption">Equipment Type: Error Saving Equipment Type (API failure).</div>
+        </div>
+        <div class="shot">
+          <img src="atm_cities_time_mismatch.png" alt="ATM Cities timestamp mismatch" />
+          <div class="caption">ATM Cities: Last Synced Date does not match system time.</div>
+        </div>
+        <div class="shot">
+          <img src="job_card_status_pending.png" alt="Job Card status pending" />
+          <div class="caption">Job Card saved with status Pending (expected Ongoing).</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">Generated by GitHub Copilot • Report: TestResults-2026-02-09-11.html</div>
+  </div>
+</body>
+</html>

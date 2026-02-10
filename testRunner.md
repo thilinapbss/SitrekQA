@@ -38,6 +38,26 @@ You are a **Test Case Executor** for the **Sitrek Application**. Your responsibi
 # Test Suites - Sitrak Modules
 
 **Test Case 1 - Login to the system** [TestSuites/Login/login.md]
+
+**Test Case 2.1 - masters - Route Master** [TestSuites/masters/route_master.md]
+**Test Case 2.2 - masters - Division Master** [TestSuites/masters/division_master.md]
+**Test Case 2.3 - masters - Branch Master** [TestSuites/masters/branch_master.md]
+**Test Case 2.4 - masters - Vehicle Master** [TestSuites/masters/vehicle_master.md]
+**Test Case 2.5 - masters - Agreement Master** [TestSuites/masters/agreement_master.md]
+**Test Case 2.6 - masters - ATM Cities Master** [TestSuites/masters/atm_cities_master.md]
+**Test Case 2.7 - masters - Cities Master** [TestSuites/masters/cities_master.md]
+**Test Case 2.8 - masters - Collection Type Master** [TestSuites/masters/collection_type_master.md]
+**Test Case 2.9 - masters - Denomination Master** [TestSuites/masters/denomination_master.md]
+**Test Case 2.10 - masters - Designation Master** [TestSuites/masters/designation_master.md]
+**Test Case 2.11 - masters - Employee Master** [TestSuites/masters/employee_master.md]
+**Test Case 2.12 - masters - Equipment Master** [TestSuites/masters/equipment_master.md]
+**Test Case 2.13 - masters - Equipment Type Master** [TestSuites/masters/equipment_type_master.md]
+**Test Case 2.14 - masters - Reasons Type Master** [TestSuites/masters/reasons_type_master.md]
+**Test Case 2.15 - masters - Seal Master** [TestSuites/masters/seal_master.md]
+**Test Case 2.16 - masters - Vault Locations Master** [TestSuites/masters/vault_locations_master.md]
+**Test Case 2.17 - masters - Weapon Master** [TestSuites/masters/weapon_master.md]
+
+
 **Test Case 3 - Job Card** [TestSuites/Job/JobTemplate.md]
 **Test Case 4 - Job Card** [TestSuites/Job/JobCard.md]
 
