@@ -118,7 +118,7 @@
         <div class="summary">
           <div class="stat">
             <div class="label">Total</div>
-            <div class="value">20</div>
+            <div class="value">22</div>
           </div>
           <div class="stat">
             <div class="label">Passed</div>
@@ -126,7 +126,7 @@
           </div>
           <div class="stat">
             <div class="label">Failed / Blocked</div>
-            <div class="value" style="color: var(--fail);">7</div>
+            <div class="value" style="color: var(--blocked);">9</div>
           </div>
         </div>
       </div>
@@ -136,15 +136,15 @@
           <div class="pie">
             <svg viewBox="0 0 36 36" aria-label="Pie chart">
               <circle cx="18" cy="18" r="15.915" fill="none" stroke="#1f2a4a" stroke-width="3.5" />
-              <circle cx="18" cy="18" r="15.915" fill="none" stroke="var(--pass)" stroke-width="3.5" stroke-dasharray="65 35" stroke-dashoffset="0" />
-              <circle cx="18" cy="18" r="15.915" fill="none" stroke="var(--fail)" stroke-width="3.5" stroke-dasharray="30 70" stroke-dashoffset="-65" />
-              <circle cx="18" cy="18" r="15.915" fill="none" stroke="var(--blocked)" stroke-width="3.5" stroke-dasharray="5 95" stroke-dashoffset="-95" />
+              <circle cx="18" cy="18" r="15.915" fill="none" stroke="var(--pass)" stroke-width="3.5" stroke-dasharray="59 41" stroke-dashoffset="0" />
+              <circle cx="18" cy="18" r="15.915" fill="none" stroke="var(--fail)" stroke-width="3.5" stroke-dasharray="41 59" stroke-dashoffset="-59" />
+              <circle cx="18" cy="18" r="15.915" fill="none" stroke="var(--blocked)" stroke-width="3.5" stroke-dasharray="0 100" stroke-dashoffset="-100" />
             </svg>
           </div>
           <div class="legend">
-            <span><i class="dot pass"></i>Passed 65%</span>
-            <span><i class="dot fail"></i>Failed 30%</span>
-            <span><i class="dot blocked"></i>Blocked 5%</span>
+            <span><i class="dot pass"></i>Passed 59%</span>
+            <span><i class="dot fail"></i>Failed 41%</span>
+            <span><i class="dot blocked"></i>Blocked 0%</span>
           </div>
         </div>
       </div>
@@ -181,8 +181,8 @@
           <tr><td>Masters</td><td>Vault Locations Master</td><td class="status blocked">BLOCKED</td><td>Navigation blocked in sidebar; unable to open page.</td></tr>
           <tr><td>Masters</td><td>Weapon Master</td><td class="status pass">PASS</td><td>Sync All completed.</td></tr>
           <tr><td>Jobs</td><td>Job Template</td><td class="status pass">PASS</td><td>Created and approved successfully.</td></tr>
-          <tr><td>Jobs</td><td>Job Card</td><td class="status fail">FAIL</td><td>PDF generated; after Save, status remained “Pending” instead of “Ongoing”.</td></tr>
-        </tbody>
+          <tr><td>Jobs</td><td>Job Card</td><td class="status fail">FAIL</td><td>PDF generated; after Save, status remained “Pending” instead of “Ongoing”.</td></tr>          <tr><td>Armoury</td><td>Equipment Assignment (TC_ARMORY_001)</td><td class="status blocked">BLOCKED</td><td>Test 77% complete (20/26 steps). Blocked at Seals Management: Generate Seals button disabled despite fields populated (From: 10000, To: 10010). All prior steps passed: weapon assignment, equipment allocation completed successfully.</td></tr>
+          <tr><td>Jobs</td><td>Trip Sheet Navigation and Pending Trips Display (TC_TRIPSHEET_001)</td><td class="status fail">FAIL</td><td>Trip Sheet page loaded successfully (Jobs → Trip Sheet). Grid columns mismatch: Expected 6 columns (Job Card Number, Trip Card Number, Route Name, Created Date, Status, Trip Status) but system displays only 4 columns (Job Card Number, Route Name, Created Date, Job Stage). Missing columns: Trip Card Number, Status, Trip Status.</td></tr>
       </table>
     </div>
 
@@ -195,8 +195,7 @@
             <li>Vehicle Commander 1 substituted with “K V Weerasinghe”.</li>
             <li>Vehicle Commander 2 substituted with “K V Samarasinghe”.</li>
             <li>Armed Guard substituted with “Charuka Perera (Watcher Permit Number :N0099221121212)”.</li>
-            <li>Other Staff substituted with “Janith Samarawickrama”.</li>
-          </ul>
+            <li>Other Staff substituted with "Janith Samarawickrama".</li>            <li>[Armory] Equipment Tag 10098857 substituted (Body Camera not found in system).</li>          </ul>
         </div>
       </div>
       <div class="card" style="grid-column: span 6;">
@@ -207,8 +206,9 @@
             <li>Equipment Type create API returned error on two attempts.</li>
             <li>Collection Type duplicate validation missing.</li>
             <li>Denomination Master missing expected Sync All control.</li>
-            <li>ATM Cities Master timestamps do not match system time.</li>
-          </ul>
+            <li>ATM Cities Master timestamps do not match system time.</li>            <li>[Armory] Generate Seals button remains disabled despite both seal range fields populated. MUI combobox state synchronization issue suspected.</li>
+            <li>[Armory] Weapon and Equipment allocation working correctly; auto-population of weapon details verified.</li>
+            <li>[Trip Sheet] Grid columns mismatch: Expected 6 columns (Job Card Number, Trip Card Number, Route Name, Created Date, Status, Trip Status) but system displays only 4 columns (Job Card Number, Route Name, Created Date, Job Stage).</li>          </ul>
         </div>
       </div>
     </div>

@@ -1,0 +1,81 @@
+Total messages: 967 (Errors: 10, Warnings: 0)
+Returning 10 messages for level "error"
+
+[ERROR] Error fetching table data: TypeError: Cannot read properties of undefined (reading 'tag')
+    at https://sitrektest.ddns.net:20081/assets/ViewArmoryEquipments-D18vQPyA.js:1:79359 @ https://sitrektest.ddns.net:20081/assets/ViewArmoryEquipments-D18vQPyA.js:0
+[ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ https://sitrektest.ddns.net:20081/api/getSavedIssueHandoverData?jobCardNo=JC-09022026-0008-0020:0
+[ERROR] Error in equipment: Error: Cannot save. Only 1 equipment(s) assigned, but 2 equipment(s) are required for this job card.
+    at https://sitrektest.ddns.net:20081/assets/ViewArmoryEquipments-D18vQPyA.js:1:35117
+    at https://sitrektest.ddns.net:20081/assets/ViewArmoryEquipments-D18vQPyA.js:1:36259
+    at D6 (https://sitrektest.ddns.net:20081/assets/index-CSDAPYed.js:41:24296)
+    at j0 (https://sitrektest.ddns.net:20081/assets/index-CSDAPYed.js:41:42451)
+    at ade (https://sitrektest.ddns.net:20081/assets/index-CSDAPYed.js:41:41273)
+    at mm (https://sitrektest.ddns.net:20081/assets/index-CSDAPYed.js:41:40312)
+    at wD (https://sitrektest.ddns.net:20081/assets/index-CSDAPYed.js:41:36913)
+    at Nh (https://sitrektest.ddns.net:20081/assets/index-CSDAPYed.js:39:3288)
+    at https://sitrektest.ddns.net:20081/assets/index-CSDAPYed.js:41:34286 @ https://sitrektest.ddns.net:20081/assets/ViewArmoryEquipments-D18vQPyA.js:0
+[ERROR] Error in equipment: Error: Cannot save. Only 1 equipment(s) assigned, but 2 equipment(s) are required for this job card.
+    at https://sitrektest.ddns.net:20081/assets/ViewArmoryEquipments-D18vQPyA.js:1:35117
+    at https://sitrektest.ddns.net:20081/assets/ViewArmoryEquipments-D18vQPyA.js:1:36259
+    at D6 (https://sitrektest.ddns.net:20081/assets/index-CSDAPYed.js:41:24296)
+    at j0 (https://sitrektest.ddns.net:20081/assets/index-CSDAPYed.js:41:42451)
+    at https://sitrektest.ddns.net:20081/assets/index-CSDAPYed.js:41:40763
+    at E (https://sitrektest.ddns.net:20081/assets/index-CSDAPYed.js:26:1535)
+    at MessagePort.N (https://sitrektest.ddns.net:20081/assets/index-CSDAPYed.js:26:1894) @ https://sitrektest.ddns.net:20081/assets/ViewArmoryEquipments-D18vQPyA.js:0
+[ERROR] Error in equipment: Error: Cannot save. Only 0 equipment(s) assigned, but 2 equipment(s) are required for this job card.
+    at https://sitrektest.ddns.net:20081/assets/ViewArmoryEquipments-D18vQPyA.js:1:35117
+    at https://sitrektest.ddns.net:20081/assets/ViewArmoryEquipments-D18vQPyA.js:1:36259
+    at D6 (https://sitrektest.ddns.net:20081/assets/index-CSDAPYed.js:41:24296)
+    at j0 (https://sitrektest.ddns.net:20081/assets/index-CSDAPYed.js:41:42451)
+    at ade (https://sitrektest.ddns.net:20081/assets/index-CSDAPYed.js:41:41273)
+    at mm (https://sitrektest.ddns.net:20081/assets/index-CSDAPYed.js:41:40312)
+    at wD (https://sitrektest.ddns.net:20081/assets/index-CSDAPYed.js:41:36913)
+    at Nh (https://sitrektest.ddns.net:20081/assets/index-CSDAPYed.js:39:3288)
+    at https://sitrektest.ddns.net:20081/assets/index-CSDAPYed.js:41:34286 @ https://sitrektest.ddns.net:20081/assets/ViewArmoryEquipments-D18vQPyA.js:0
+[ERROR] Error in equipment: Error: Cannot save. Only 0 equipment(s) assigned, but 2 equipment(s) are required for this job card.
+    at https://sitrektest.ddns.net:20081/assets/ViewArmoryEquipments-D18vQPyA.js:1:35117
+    at https://sitrektest.ddns.net:20081/assets/ViewArmoryEquipments-D18vQPyA.js:1:36259
+    at D6 (https://sitrektest.ddns.net:20081/assets/index-CSDAPYed.js:41:24296)
+    at j0 (https://sitrektest.ddns.net:20081/assets/index-CSDAPYed.js:41:42451)
+    at https://sitrektest.ddns.net:20081/assets/index-CSDAPYed.js:41:40763
+    at E (https://sitrektest.ddns.net:20081/assets/index-CSDAPYed.js:26:1535)
+    at MessagePort.N (https://sitrektest.ddns.net:20081/assets/index-CSDAPYed.js:26:1894) @ https://sitrektest.ddns.net:20081/assets/ViewArmoryEquipments-D18vQPyA.js:0
+[ERROR] Error in equipment: Error: Tag Number is required; Equipment Name is required; Tag Number is required; Equipment Name is required
+    at https://sitrektest.ddns.net:20081/assets/ViewArmoryEquipments-D18vQPyA.js:1:35824
+    at https://sitrektest.ddns.net:20081/assets/ViewArmoryEquipments-D18vQPyA.js:1:36259
+    at D6 (https://sitrektest.ddns.net:20081/assets/index-CSDAPYed.js:41:24296)
+    at j0 (https://sitrektest.ddns.net:20081/assets/index-CSDAPYed.js:41:42451)
+    at ade (https://sitrektest.ddns.net:20081/assets/index-CSDAPYed.js:41:41273)
+    at mm (https://sitrektest.ddns.net:20081/assets/index-CSDAPYed.js:41:40312)
+    at wD (https://sitrektest.ddns.net:20081/assets/index-CSDAPYed.js:41:36913)
+    at Nh (https://sitrektest.ddns.net:20081/assets/index-CSDAPYed.js:39:3288)
+    at https://sitrektest.ddns.net:20081/assets/index-CSDAPYed.js:41:34286 @ https://sitrektest.ddns.net:20081/assets/ViewArmoryEquipments-D18vQPyA.js:0
+[ERROR] Error in equipment: Error: Tag Number is required; Equipment Name is required; Tag Number is required; Equipment Name is required
+    at https://sitrektest.ddns.net:20081/assets/ViewArmoryEquipments-D18vQPyA.js:1:35824
+    at https://sitrektest.ddns.net:20081/assets/ViewArmoryEquipments-D18vQPyA.js:1:36259
+    at D6 (https://sitrektest.ddns.net:20081/assets/index-CSDAPYed.js:41:24296)
+    at j0 (https://sitrektest.ddns.net:20081/assets/index-CSDAPYed.js:41:42451)
+    at wD (https://sitrektest.ddns.net:20081/assets/index-CSDAPYed.js:41:36652)
+    at Nh (https://sitrektest.ddns.net:20081/assets/index-CSDAPYed.js:39:3288)
+    at ade (https://sitrektest.ddns.net:20081/assets/index-CSDAPYed.js:41:41328)
+    at mm (https://sitrektest.ddns.net:20081/assets/index-CSDAPYed.js:41:40312)
+    at qK (https://sitrektest.ddns.net:20081/assets/index-CSDAPYed.js:41:35759)
+    at E (https://sitrektest.ddns.net:20081/assets/index-CSDAPYed.js:26:1535) @ https://sitrektest.ddns.net:20081/assets/ViewArmoryEquipments-D18vQPyA.js:0
+[ERROR] Error in equipment: Error: Cannot save. Only 0 equipment(s) assigned, but 2 equipment(s) are required for this job card.
+    at https://sitrektest.ddns.net:20081/assets/ViewArmoryEquipments-D18vQPyA.js:1:35117
+    at https://sitrektest.ddns.net:20081/assets/ViewArmoryEquipments-D18vQPyA.js:1:36259
+    at D6 (https://sitrektest.ddns.net:20081/assets/index-CSDAPYed.js:41:24296)
+    at j0 (https://sitrektest.ddns.net:20081/assets/index-CSDAPYed.js:41:42451)
+    at ade (https://sitrektest.ddns.net:20081/assets/index-CSDAPYed.js:41:41273)
+    at mm (https://sitrektest.ddns.net:20081/assets/index-CSDAPYed.js:41:40312)
+    at wD (https://sitrektest.ddns.net:20081/assets/index-CSDAPYed.js:41:36913)
+    at Nh (https://sitrektest.ddns.net:20081/assets/index-CSDAPYed.js:39:3288)
+    at https://sitrektest.ddns.net:20081/assets/index-CSDAPYed.js:41:34286 @ https://sitrektest.ddns.net:20081/assets/ViewArmoryEquipments-D18vQPyA.js:0
+[ERROR] Error in equipment: Error: Cannot save. Only 0 equipment(s) assigned, but 2 equipment(s) are required for this job card.
+    at https://sitrektest.ddns.net:20081/assets/ViewArmoryEquipments-D18vQPyA.js:1:35117
+    at https://sitrektest.ddns.net:20081/assets/ViewArmoryEquipments-D18vQPyA.js:1:36259
+    at D6 (https://sitrektest.ddns.net:20081/assets/index-CSDAPYed.js:41:24296)
+    at j0 (https://sitrektest.ddns.net:20081/assets/index-CSDAPYed.js:41:42451)
+    at https://sitrektest.ddns.net:20081/assets/index-CSDAPYed.js:41:40763
+    at E (https://sitrektest.ddns.net:20081/assets/index-CSDAPYed.js:26:1535)
+    at MessagePort.N (https://sitrektest.ddns.net:20081/assets/index-CSDAPYed.js:26:1894) @ https://sitrektest.ddns.net:20081/assets/ViewArmoryEquipments-D18vQPyA.js:0

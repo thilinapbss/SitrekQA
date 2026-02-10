@@ -1,0 +1,3 @@
+[   64403ms] [ERROR] Error fetching table data: TypeError: Cannot read properties of undefined (reading 'tag')
+    at https://111.119.245.10:20081/assets/ViewArmoryEquipments-D18vQPyA.js:1:79359 @ https://111.119.245.10:20081/assets/ViewArmoryEquipments-D18vQPyA.js:0
+[   83379ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ https://111.119.245.10:20081/api/getSavedIssueHandoverData?jobCardNo=JC-09022026-0008-0020:0

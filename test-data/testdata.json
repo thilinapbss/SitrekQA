@@ -8,6 +8,10 @@
     "approver": {
       "username": "namal",
       "password": "Admin@1234"
+    },
+    "tripSheetUser": {
+      "username": "K V S  Perera",
+      "password": "123456"
     }
   },
   "commonData": {
@@ -32,7 +36,8 @@
         "location": "NATION TRUST KELANIYA - Colombo - SITREK NEGOMBO BRANCH",
         "jobType": "Collect & Deposit",
         "operationType": "CIT",
-        "atmId": "NA"
+        "atmId": "NA",
+        "jobCardNumber": "JC-09022026-0008-0020"
       },
       "vehicle": "Wagon R",
       "teamAllocation": {
@@ -156,6 +161,121 @@
         "expectedSystemTime": "2026-02-09 12:37:23",
         "columnToVerify": "Last Synced Date",
         "timezone": "Asia/Colombo (UTC+5:30)"
+      }
+    },
+    "TC_ARMORY_001": {
+      "testName": "Armory Equipment Assignment with Weapon and Equipment Allocation",
+      "jobCardSelection": {
+        "status": "Pending",
+        "tripStatus": "Not Started"
+      },
+      "weaponAllocation": {
+        "licenseNumber": "1000004501",
+        "weaponName": "Repeater-74366 - 1",
+        "serialNumber": "",
+        "issuedToGuard": "",
+        "watcherPermit": ""
+      },
+      "equipmentAllocation": {
+        "count": 2,
+        "smallBagTag": "",
+        "smallBagName": "Small Bag",
+        "smallBagIssuedCount": 2,
+        "largeBagTag": "",
+        "largeBagName": "Large Bag",
+        "largeBagIssuedCount": 2,
+        "MobileTag": "0100001",
+        "BodyCameraTag": "10098857"
+      },
+      "sealManagement": {
+        "fromSeal": 10000,
+        "toSeal": 10010
+      },
+      "expectedResults": {
+        "initialStatus": "Pending",
+        "finalStatus": "Completed",
+        "trustReceiptGenerated": true,
+        "notificationDisplayed": true
+      }
+    },
+    "TC_VAULT_001": {
+      "testName": "Vault Equipment Assignment and Management",
+      "jobCardSelection": {
+        "status": "Pending",
+        "tripStatus": "Not Started"
+      },
+      "equipmentAllocation": {
+        "initialEquipment": {
+          "type": "Cash Counting Machine",
+          "quantity": 1
+        },
+        "newEquipment": {
+          "type": "Cash Counting Machine",
+          "device": "Bundle Note Counting Machine",
+          "tagNumber": "D0003",
+          "issuedTo": ""
+        }
+      },
+      "expectedResults": {
+        "initialEquipmentDisplayed": true,
+        "newRowAdded": true,
+        "dataSavedSuccessfully": true,
+        "notificationDisplayed": true,
+        "trustReceiptGenerated": true,
+        "trustReceiptDownloaded": true
+      }
+    },
+    "TC_VAULT_OPS_001": {
+      "testName": "Vault Operations Pass Loading Workflow",
+      "jobCardSelection": {
+        "status": "Pending",
+        "tripStatus": "Not Started"
+      },
+      "passLoading": {
+        "action": "Pass Loading",
+        "expectedMessage": "Pass loading completed successfully"
+      },
+      "expectedResults": {
+        "pageLoaded": true,
+        "jobCardGridDisplayed": true,
+        "jobCardSelected": true,
+        "assignVaultPageDisplayed": true,
+        "passLoadingSuccessful": true,
+        "notificationDisplayed": true
+      }
+    },
+    "TC_TRIPSHEET_001": {
+      "testName": "Trip Sheet Navigation and Pending Trips Display",
+      "loginCredentials": {
+        "username": "K V S  Perera",
+        "password": "123456"
+      },
+      "tripCardData": {
+        "jobCardNumber": "JC-09022026-0007-0016",
+        "substitutionNote": "Original expected JC-09022026-0008-0020 not found in system; substituted with available JC-09022026-0007-0016"
+      },
+      "navigationPath": {
+        "module": "Trip Sheet",
+        "menu": "Trip"
+      },
+      "gridDisplay": {
+        "columns": [
+          "Job Card Number",
+          "Trip Card Number",
+          "Route Name",
+          "Created Date",
+          "Status",
+          "Trip Status"
+        ],
+        "expectedStatus": "Pending"
+      },
+      "expectedResults": {
+        "loginSuccessful": true,
+        "dashboardLoaded": true,
+        "tripSheetPageLoaded": true,
+        "pendingTripsGridDisplayed": true,
+        "tripCardsPopulated": true,
+        "dataIntegrityVerified": true
       }
     }
   }

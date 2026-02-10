@@ -61,4 +61,5 @@ You are a **Test Case Executor** for the **Sitrek Application**. Your responsibi
 **Test Case 3 - Job Card** [TestSuites/Job/JobTemplate.md]
 **Test Case 4 - Job Card** [TestSuites/Job/JobCard.md]
 
+**Test Case 5 - Armory Equipment Assignment** [TestSuites/Armory/ArmoryEquipments.md]
 
