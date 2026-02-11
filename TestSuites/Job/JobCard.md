@@ -79,7 +79,8 @@ If any test data value (route, customer, vehicle, staff member, equipment, etc.)
 | 8.8 | Click on Equipment dropdown again and select "**TC_JOB_CARD_001.equipmentAllocation[2]**" from the list | Third equipment "**TC_JOB_CARD_001.equipmentAllocation[2]**" is selected |
 | 9 | Verify that selected equipment are displayed correctly in the "Allocate Equipment Count" table | Equipment table displays all three selected equipment with their details correctly populated |
 | 10 | Click on "Print Job Card" button | PDF job card is generated and downloaded containing: Job details, Route, Customer, Location, Template Name, Job Type, Operation Type, Agreement, All selected team members (Driver, Commanders, Staff, Armed Guards), All selected equipment (Cash Counting Machine, Mobile, Body Camera) |
-| 11 | Click "Save" button | Job Card is created successfully and displays in the Job Card table with: Status = "Ongoing", Route, Job Card Number, Scheduled Date |
+| 11 | **TC_JOB_CARD_001.jobCardNumber** is updated in the test data file for future reference and use.
+| 12 | Click "Save" button | Job Card is created successfully and displays in the Job Card table with: Status = "Ongoing", Route, Job Card Number, Scheduled Date |
 
 ### Expected Results
 - User can successfully navigate to Job Card creation page
@@ -91,6 +92,7 @@ If any test data value (route, customer, vehicle, staff member, equipment, etc.)
 - Job Card PDF is generated with all required information
 - Job Card is saved with "Ongoing" status and appears in the job card list
 - Job Card includes Route, Job Card Number, and Scheduled Date
+- **TC_JOB_CARD_001.jobCardNumber** is updated in the test data file for future reference and use.
 
 ### Reference Data from JSON
 
@@ -115,6 +117,7 @@ If any test data value (route, customer, vehicle, staff member, equipment, etc.)
 | **Equipment 2** | See test-data/testdata.json |
 | **Equipment 3** | See test-data/testdata.json |
 | **Initial Status** | See test-data/testdata.json |
+| **Job Card Number** | See test-data/testdata.json (to be updated after creation) |
 
 ### Test Artifacts
 - Screenshots of each step during Job Card creation

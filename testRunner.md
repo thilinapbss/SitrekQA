@@ -28,6 +28,7 @@ You are a **Test Case Executor** for the **Sitrek Application**. Your responsibi
 - Login credentials and base URL saved in .env file
 - If fail test case try twice and if again fail skip it skip it and move to next
 - Please done API testing please and create seperte report also for API test.
+When create script use xpaths and css selectors from playwright MCP only.
 
 # Test Configurations
 - Web Browser : Chrome
@@ -62,4 +63,8 @@ You are a **Test Case Executor** for the **Sitrek Application**. Your responsibi
 **Test Case 4 - Job Card** [TestSuites/Job/JobCard.md]
 
 **Test Case 5 - Armory Equipment Assignment** [TestSuites/Armory/ArmoryEquipments.md]
+**Test Case 6 - Vault Equipment Assignment** [TestSuites/Vault/VaultEquipments.md]
+**Test Case 7 - Vault Equipment Assignment** [TestSuites/Vault/vaultEquipments.md]
+**Test Case 8 - Vault Operations** [TestSuites/Vault/vaultOperations.md]
 
+**Test Case 9 - Tripsheet Module** [TestSuites/Job/Tripsheet.md]
